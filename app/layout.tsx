@@ -8,10 +8,12 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { BackToTop } from "@/components/back-to-top";
+import { testimonials } from "@/lib/data/testimonials";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const GSC_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION;
 const BING_VERIFICATION = process.env.BING_SITE_VERIFICATION;
+const YANDEX_VERIFICATION = process.env.YANDEX_SITE_VERIFICATION;
 
 const inter = Inter({
   variable: "--font-inter",
@@ -72,20 +74,11 @@ export const metadata: Metadata = {
     description: SITE.description,
     url: SITE.url,
     locale: "en_PH",
-    images: [
-      {
-        url: SITE.ogImage,
-        width: 1200,
-        height: 630,
-        alt: "Vayang Rolling Hills overlooking the West Philippine Sea in Batanes",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE.name} — ${SITE.tagline}`,
     description: SITE.description,
-    images: [SITE.ogImage],
   },
   robots: {
     index: true,
@@ -101,40 +94,105 @@ export const metadata: Metadata = {
   icons: { icon: "/favicon.ico" },
   verification: {
     google: GSC_VERIFICATION,
+    yandex: YANDEX_VERIFICATION,
     other: BING_VERIFICATION
       ? { "msvalidate.01": BING_VERIFICATION }
       : undefined,
   },
 };
 
+const totalReviews = testimonials.length;
+const averageRating =
+  testimonials.reduce((sum, t) => sum + t.rating, 0) / totalReviews;
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const orgLd = {
     "@context": "https://schema.org",
-    "@type": "TravelAgency",
+    "@type": ["TravelAgency", "LocalBusiness"],
+    "@id": `${SITE.url}/#organization`,
     name: SITE.name,
     description: SITE.description,
     url: SITE.url,
-    logo: `${SITE.url}/favicon.ico`,
-    areaServed: {
-      "@type": "AdministrativeArea",
-      name: "Batanes, Philippines",
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE.url}/favicon.ico`,
     },
+    image: `${SITE.url}/opengraph-image`,
+    telephone: SITE.phone,
+    email: SITE.email,
+    priceRange: "₱₱-₱₱₱",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "National Road",
+      addressLocality: "Basco",
+      addressRegion: "Batanes",
+      postalCode: "3900",
+      addressCountry: "PH",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 20.4487,
+      longitude: 121.9702,
+    },
+    areaServed: [
+      { "@type": "Place", name: "Batan Island, Batanes" },
+      { "@type": "Place", name: "Sabtang Island, Batanes" },
+      { "@type": "Place", name: "Itbayat Island, Batanes" },
+    ],
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "18:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "09:00",
+        closes: "13:00",
+      },
+    ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: averageRating.toFixed(1),
+      reviewCount: totalReviews,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    review: testimonials.slice(0, 3).map((t) => ({
+      "@type": "Review",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: t.rating,
+        bestRating: 5,
+      },
+      author: { "@type": "Person", name: t.name },
+      reviewBody: t.quote,
+    })),
     sameAs: [
-      "https://www.facebook.com/VisitBatanesPH",
-      "https://www.instagram.com/VisitBatanesPH",
+      SITE.socials.facebook,
+      SITE.socials.instagram,
+      SITE.socials.youtube,
     ],
   };
 
   const websiteLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE.url}/#website`,
     name: SITE.name,
     url: SITE.url,
+    inLanguage: "en-PH",
+    publisher: { "@id": `${SITE.url}/#organization` },
     potentialAction: {
       "@type": "SearchAction",
-      target: `${SITE.url}/destinations?q={search_term_string}`,
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${SITE.url}/destinations?q={search_term_string}`,
+      },
       "query-input": "required name=search_term_string",
     },
   };

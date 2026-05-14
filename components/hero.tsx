@@ -15,7 +15,7 @@ export function Hero() {
     >
       <div className="absolute inset-0 -z-10">
         <Image
-          src="https://images.unsplash.com/photo-1518563259479-d003eb6e2924?auto=format&fit=crop&w=2400&q=80"
+          src="/image/SouthBatan.jpg"
           alt="Aerial view of Vayang Rolling Hills sweeping down to the West Philippine Sea at golden hour in Batanes"
           fill
           priority

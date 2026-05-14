@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="900" viewBox="0 0 420 900" font-family="Arial, sans-serif">
+  <!-- Phone frame -->
+  <rect x="0" y="0" width="420" height="900" rx="40" fill="#1a1a1a"/>
+  <rect x="8" y="8" width="404" height="884" rx="34" fill="#ffffff"/>
+  <rect x="170" y="20" width="80" height="22" rx="11" fill="#1a1a1a"/>
+
+  <!-- Status bar -->
+  <text x="30" y="35" font-size="11" font-weight="600" fill="white">9:41</text>
+  <text x="390" y="35" font-size="11" fill="white" text-anchor="end">📶 🔋</text>
+
+  <!-- Google search bar -->
+  <g transform="translate(20, 60)">
+    <rect x="0" y="0" width="380" height="45" rx="22" fill="#f1f3f4"/>
+    <text x="20" y="28" font-size="14" fill="#5f6368">🔍</text>
+    <text x="50" y="28" font-size="14" fill="#202124">visit batanes faq</text>
+    <text x="345" y="28" font-size="16" fill="#5f6368">⋮</text>
+  </g>
+
+  <!-- Tabs -->
+  <g transform="translate(20, 125)" font-size="13" fill="#5f6368">
+    <text x="0" y="0" font-weight="500" fill="#1a73e8">All</text>
+    <line x1="-5" y1="8" x2="20" y2="8" stroke="#1a73e8" stroke-width="2"/>
+    <text x="40" y="0">Images</text>
+    <text x="90" y="0">Maps</text>
+    <text x="135" y="0">News</text>
+    <text x="180" y="0">Videos</text>
+    <text x="240" y="0">More</text>
+  </g>
+
+  <line x1="0" y1="145" x2="420" y2="145" stroke="#ebebeb" stroke-width="1"/>
+
+  <!-- AI Overview -->
+  <g transform="translate(15, 165)">
+    <rect x="0" y="0" width="390" height="170" rx="14" fill="#f0f7ff" stroke="#d2e3fc" stroke-width="1"/>
+    <text x="15" y="25" font-size="12" font-weight="bold" fill="#1967d2">✨ AI Overview</text>
+    <text x="15" y="50" font-size="12" fill="#202124">Batanes is the northernmost province of</text>
+    <text x="15" y="68" font-size="12" fill="#202124">the Philippines. Common FAQs include best</text>
+    <text x="15" y="86" font-size="12" fill="#202124">time to visit (March–May), how to get there</text>
+    <text x="15" y="104" font-size="12" fill="#202124">(direct flights from Manila), and Ivatan</text>
+    <text x="15" y="122" font-size="12" fill="#202124">culture etiquette.</text>
+    <text x="15" y="150" font-size="10" fill="#5f6368">↑ Source: visitbatanes.vercel.app/faq</text>
+  </g>
+
+  <!-- First result with FAQ rich snippet -->
+  <g transform="translate(15, 360)">
+    <circle cx="14" cy="10" r="12" fill="#0a4d68"/>
+    <text x="14" y="14" font-size="13" font-weight="bold" fill="white" text-anchor="middle">V</text>
+
+    <text x="34" y="6" font-size="11" fill="#202124">Visit Batanes</text>
+    <text x="34" y="20" font-size="10" fill="#5f6368">visitbatanes.vercel.app › faq</text>
+
+    <text x="0" y="55" font-size="16" fill="#1a0dab">FAQs — Batanes Travel, Booking,</text>
+    <text x="0" y="74" font-size="16" fill="#1a0dab">Safety, Culture &amp; Itinerary</text>
+
+    <text x="0" y="100" font-size="12" fill="#4d5156">Detailed answers to the most common</text>
+    <text x="0" y="116" font-size="12" fill="#4d5156">Batanes travel questions: best time to visit,</text>
+    <text x="0" y="132" font-size="12" fill="#4d5156">how to get there, safety, transportation...</text>
+  </g>
+
+  <!-- FAQ accordion in SERP -->
+  <g transform="translate(15, 510)">
+    <rect x="0" y="0" width="390" height="200" rx="8" fill="#ffffff" stroke="#dadce0" stroke-width="1"/>
+
+    <line x1="15" y1="40" x2="375" y2="40" stroke="#dadce0" stroke-width="0.5"/>
+    <text x="15" y="25" font-size="12" font-weight="500" fill="#202124">When is the best time to visit Batanes?</text>
+    <text x="365" y="25" font-size="14" fill="#5f6368" text-anchor="end">▾</text>
+    <text x="15" y="58" font-size="11" fill="#4d5156">March to May is ideal: calm seas, green hills,</text>
+    <text x="15" y="74" font-size="11" fill="#4d5156">low cancellation risk for flights and boats.</text>
+
+    <line x1="15" y1="100" x2="375" y2="100" stroke="#dadce0" stroke-width="0.5"/>
+    <text x="15" y="90" font-size="12" font-weight="500" fill="#202124">How do I get to Batanes?</text>
+    <text x="365" y="90" font-size="14" fill="#5f6368" text-anchor="end">▸</text>
+
+    <line x1="15" y1="135" x2="375" y2="135" stroke="#dadce0" stroke-width="0.5"/>
+    <text x="15" y="125" font-size="12" font-weight="500" fill="#202124">Is Batanes safe for solo travelers?</text>
+    <text x="365" y="125" font-size="14" fill="#5f6368" text-anchor="end">▸</text>
+
+    <text x="15" y="165" font-size="12" font-weight="500" fill="#202124">Do I need to book tours in advance?</text>
+    <text x="365" y="165" font-size="14" fill="#5f6368" text-anchor="end">▸</text>
+
+    <text x="15" y="190" font-size="12" fill="#5f6368">More questions →</text>
+  </g>
+
+  <!-- Footer -->
+  <g transform="translate(15, 740)">
+    <rect x="0" y="0" width="390" height="130" rx="10" fill="#fef7e0" stroke="#feefc3" stroke-width="1"/>
+    <text x="15" y="20" font-size="11" font-weight="bold" fill="#5f6368">📱 Mobile SERP Preview</text>
+    <text x="15" y="40" font-size="10" fill="#3c4043">May FAQ rich snippets ka kasi may FAQPage</text>
+    <text x="15" y="56" font-size="10" fill="#3c4043">structured data sa /faq page mo.</text>
+    <text x="15" y="80" font-size="10" fill="#3c4043">Yung AI Overview ay gagamit ng:</text>
+    <text x="15" y="96" font-size="10" fill="#3c4043">• Site title at description</text>
+    <text x="15" y="110" font-size="10" fill="#3c4043">• FAQ schema content</text>
+    <text x="15" y="124" font-size="10" fill="#3c4043">• Article excerpt galing sa travel guide</text>
+  </g>
+</svg>

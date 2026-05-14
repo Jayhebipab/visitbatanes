@@ -6,6 +6,8 @@ import { Section } from "@/components/section";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ArrowRightIcon, ClockIcon } from "@/components/icons";
 import { guides, getGuideBySlug } from "@/lib/data/guides";
+import { featuredDestinations } from "@/lib/data/destinations";
+import { DestinationCard } from "@/components/destination-card";
 import { SITE } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -56,21 +58,30 @@ export default async function GuideDetail({
 
   const articleLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "TravelGuide",
     headline: g.title,
     description: g.excerpt,
     datePublished: g.date,
+    dateModified: g.date,
     image: g.image,
-    author: { "@type": "Organization", name: g.author },
-    publisher: {
-      "@type": "Organization",
-      name: SITE.name,
-      url: SITE.url,
+    keywords: g.tags.join(", "),
+    inLanguage: "en-PH",
+    about: {
+      "@type": "Place",
+      name: "Batanes, Philippines",
     },
+    author: {
+      "@type": "Organization",
+      "@id": `${SITE.url}/#organization`,
+      name: g.author,
+      url: `${SITE.url}/about`,
+    },
+    publisher: { "@id": `${SITE.url}/#organization` },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${SITE.url}/travel-guide/${g.slug}`,
     },
+    isPartOf: { "@id": `${SITE.url}/#website` },
   };
 
   const others = guides.filter((x) => x.slug !== g.slug).slice(0, 2);
@@ -120,14 +131,25 @@ export default async function GuideDetail({
               {g.title}
             </h1>
             <p className="mt-5 max-w-2xl text-lg text-white/85">{g.excerpt}</p>
-            <p className="mt-5 flex items-center gap-2 text-sm text-white/75">
-              <ClockIcon size={14} />
-              {g.readTime} · {new Date(g.date).toLocaleDateString("en-PH", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </p>
+            <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-white/75">
+              <span className="flex items-center gap-1.5">
+                <ClockIcon size={14} />
+                {g.readTime}
+              </span>
+              <span aria-hidden>·</span>
+              <span>
+                Updated{" "}
+                <time dateTime={g.date}>
+                  {new Date(g.date).toLocaleDateString("en-PH", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </time>
+              </span>
+              <span aria-hidden>·</span>
+              <span>By {g.author}</span>
+            </div>
           </div>
         </header>
 
@@ -145,6 +167,20 @@ export default async function GuideDetail({
             </section>
           ))}
         </div>
+
+        <Section
+          eyebrow="Plan your visit"
+          title="Destinations mentioned in this guide"
+          description="The featured stops you'll want to see in person."
+        >
+          <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredDestinations.slice(0, 3).map((d) => (
+              <li key={d.slug}>
+                <DestinationCard d={d} />
+              </li>
+            ))}
+          </ul>
+        </Section>
 
         {others.length > 0 && (
           <Section

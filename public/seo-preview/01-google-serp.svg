@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1400" viewBox="0 0 900 1400" font-family="Arial, sans-serif">
+  <rect width="900" height="1400" fill="#ffffff"/>
+
+  <!-- Google header -->
+  <g transform="translate(30, 30)">
+    <text x="0" y="0" font-size="32" font-weight="500">
+      <tspan fill="#4285f4">G</tspan><tspan fill="#ea4335">o</tspan><tspan fill="#fbbc04">o</tspan><tspan fill="#4285f4">g</tspan><tspan fill="#34a853">l</tspan><tspan fill="#ea4335">e</tspan>
+    </text>
+    <rect x="120" y="-22" width="540" height="42" rx="21" fill="#ffffff" stroke="#dfe1e5" stroke-width="1"/>
+    <text x="140" y="5" font-size="16" fill="#202124">visit batanes travel guide</text>
+    <text x="630" y="5" font-size="20" fill="#5f6368">🔍</text>
+  </g>
+
+  <line x1="0" y1="80" x2="900" y2="80" stroke="#ebebeb" stroke-width="1"/>
+
+  <!-- Tabs -->
+  <g transform="translate(30, 105)" font-size="14" fill="#5f6368">
+    <text x="0" y="0">All</text>
+    <text x="60" y="0">Images</text>
+    <text x="135" y="0">Videos</text>
+    <text x="205" y="0">News</text>
+    <text x="265" y="0">Maps</text>
+    <text x="330" y="0">Tools</text>
+  </g>
+  <line x1="0" y1="125" x2="900" y2="125" stroke="#ebebeb" stroke-width="1"/>
+
+  <!-- Stats -->
+  <text x="30" y="155" font-size="12" fill="#70757a">About 4 results (0.42 seconds)</text>
+
+  <!-- AI Overview banner -->
+  <g transform="translate(30, 180)">
+    <rect x="0" y="0" width="800" height="180" rx="12" fill="#f0f7ff" stroke="#d2e3fc" stroke-width="1"/>
+    <text x="20" y="30" font-size="14" font-weight="bold" fill="#1967d2">✨ AI Overview</text>
+    <text x="20" y="60" font-size="13" fill="#202124">Visit Batanes is a curated travel resource for the northernmost province of</text>
+    <text x="20" y="80" font-size="13" fill="#202124">the Philippines, featuring 12 destinations across Batan, Sabtang, and Itbayat</text>
+    <text x="20" y="100" font-size="13" fill="#202124">islands. The site offers detailed guides, tour packages, and Ivatan culture</text>
+    <text x="20" y="120" font-size="13" fill="#202124">tips. Best time to visit is March to May for calm seas and clear hills.</text>
+    <text x="20" y="160" font-size="11" fill="#5f6368">Sources: visitbatanes.vercel.app/travel-guide, /about, /faq</text>
+  </g>
+
+  <!-- Result 1: About -->
+  <g transform="translate(30, 400)">
+    <rect x="0" y="-10" width="40" height="40" rx="20" fill="#0a4d68"/>
+    <text x="20" y="14" font-size="18" font-weight="bold" fill="white" text-anchor="middle">V</text>
+
+    <text x="55" y="0" font-size="12" fill="#202124">Visit Batanes</text>
+    <text x="55" y="16" font-size="11" fill="#5f6368">https://visitbatanes.vercel.app › about</text>
+
+    <text x="0" y="50" font-size="20" fill="#1a0dab">About Visit Batanes — Slow Travel, Local Hearts</text>
+
+    <text x="0" y="78" font-size="13" fill="#4d5156">Visit Batanes curates Ivatan-led tours and travel guides for slow,</text>
+    <text x="0" y="96" font-size="13" fill="#4d5156">responsible, heritage-first journeys to the northernmost province of</text>
+    <text x="0" y="114" font-size="13" fill="#4d5156">the Philippines.</text>
+
+    <!-- Sitelinks -->
+    <g transform="translate(0, 135)">
+      <text x="0" y="0" font-size="13" fill="#1a0dab">Our values</text>
+      <text x="100" y="0" font-size="13" fill="#1a0dab">Local partners</text>
+      <text x="220" y="0" font-size="13" fill="#1a0dab">Testimonials</text>
+    </g>
+  </g>
+
+  <!-- Result 2: FAQ -->
+  <g transform="translate(30, 590)">
+    <rect x="0" y="-10" width="40" height="40" rx="20" fill="#0a4d68"/>
+    <text x="20" y="14" font-size="18" font-weight="bold" fill="white" text-anchor="middle">V</text>
+
+    <text x="55" y="0" font-size="12" fill="#202124">Visit Batanes</text>
+    <text x="55" y="16" font-size="11" fill="#5f6368">https://visitbatanes.vercel.app › faq</text>
+
+    <text x="0" y="50" font-size="20" fill="#1a0dab">FAQs — Batanes Travel, Booking, Safety, Culture &amp; Itinerary</text>
+
+    <text x="0" y="78" font-size="13" fill="#4d5156">Detailed answers to the most common Batanes travel questions: best</text>
+    <text x="0" y="96" font-size="13" fill="#4d5156">time to visit, how to get there, safety, transportation, culture, food,</text>
+    <text x="0" y="114" font-size="13" fill="#4d5156">and more.</text>
+
+    <!-- Rich FAQ snippet -->
+    <g transform="translate(0, 135)">
+      <text x="0" y="0" font-size="13" font-weight="500" fill="#202124">▾ When is the best time to visit Batanes?</text>
+      <text x="0" y="22" font-size="13" font-weight="500" fill="#202124">▸ How do I get to Batanes?</text>
+      <text x="0" y="44" font-size="13" font-weight="500" fill="#202124">▸ Is Batanes safe for solo travelers?</text>
+    </g>
+  </g>
+
+  <!-- Result 3: Contact -->
+  <g transform="translate(30, 830)">
+    <rect x="0" y="-10" width="40" height="40" rx="20" fill="#0a4d68"/>
+    <text x="20" y="14" font-size="18" font-weight="bold" fill="white" text-anchor="middle">V</text>
+
+    <text x="55" y="0" font-size="12" fill="#202124">Visit Batanes</text>
+    <text x="55" y="16" font-size="11" fill="#5f6368">https://visitbatanes.vercel.app › contact</text>
+
+    <text x="0" y="50" font-size="20" fill="#1a0dab">Contact Visit Batanes — Plan Your Trip</text>
+
+    <text x="0" y="78" font-size="13" fill="#4d5156">Reach out for a custom Batanes itinerary, tour booking inquiries, or</text>
+    <text x="0" y="96" font-size="13" fill="#4d5156">any planning questions. We respond within one business day.</text>
+  </g>
+
+  <!-- Result 4: Travel Guide -->
+  <g transform="translate(30, 990)">
+    <rect x="0" y="-10" width="40" height="40" rx="20" fill="#0a4d68"/>
+    <text x="20" y="14" font-size="18" font-weight="bold" fill="white" text-anchor="middle">V</text>
+
+    <text x="55" y="0" font-size="12" fill="#202124">Visit Batanes</text>
+    <text x="55" y="16" font-size="11" fill="#5f6368">https://visitbatanes.vercel.app › travel-guide</text>
+
+    <text x="0" y="50" font-size="20" fill="#1a0dab">Batanes Travel Guide — Itineraries, Tips &amp; Local Stories</text>
+
+    <text x="0" y="78" font-size="13" fill="#4d5156">In-depth travel guides for Batanes — best time to visit, what to eat,</text>
+    <text x="0" y="96" font-size="13" fill="#4d5156">what to pack, 4-day itineraries, and Ivatan culture explained.</text>
+
+    <!-- Article list -->
+    <g transform="translate(0, 130)">
+      <text x="0" y="0" font-size="13" fill="#1a0dab">First-Time Visitor's Guide</text>
+      <text x="200" y="0" font-size="13" fill="#1a0dab">Best Time to Visit</text>
+      <text x="380" y="0" font-size="13" fill="#1a0dab">Ivatan Food Guide</text>
+    </g>
+  </g>
+
+  <!-- Footer note -->
+  <g transform="translate(30, 1200)">
+    <rect x="0" y="0" width="840" height="160" rx="12" fill="#fef7e0" stroke="#feefc3" stroke-width="1"/>
+    <text x="20" y="30" font-size="14" font-weight="bold" fill="#5f6368">📌 SEO Preview — Predicted Google SERP appearance</text>
+    <text x="20" y="55" font-size="12" fill="#3c4043">Itong appearance ay base sa actual metadata at JSON-LD schemas ng site mo.</text>
+    <text x="20" y="75" font-size="12" fill="#3c4043">Mga features na enabled na:</text>
+    <text x="35" y="95" font-size="12" fill="#3c4043">✓ Rich title (60 chars max, fits perfectly)</text>
+    <text x="35" y="115" font-size="12" fill="#3c4043">✓ Descriptive meta description (visible in SERP)</text>
+    <text x="35" y="135" font-size="12" fill="#3c4043">✓ Breadcrumb navigation (›) — from BreadcrumbList JSON-LD</text>
+    <text x="430" y="95" font-size="12" fill="#3c4043">✓ FAQ rich snippet — from FAQPage schema</text>
+    <text x="430" y="115" font-size="12" fill="#3c4043">✓ Sitelinks — appear automatically after indexing</text>
+    <text x="430" y="135" font-size="12" fill="#3c4043">✓ AI Overview eligibility — clean structured data</text>
+  </g>
+</svg>

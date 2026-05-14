@@ -79,8 +79,7 @@ export const tours: Tour[] = [
           "Cool off at Imnajbu Beach and learn about Ivatan fishing rituals at Diura, ending the day with a dip in the Spring of Youth.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1499678329028-101435549a4e?auto=format&fit=crop&w=1600&q=80",
+    image: "/image/SouthBatan.jpg",
     imageAlt:
       "Limestone Ivatan stone village along the South Batan coastal road",
     category: "South Batan",

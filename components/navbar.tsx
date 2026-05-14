@@ -57,14 +57,7 @@ export function Navbar() {
         <Link
           href="/"
           className="flex items-center gap-2 font-display text-lg md:text-xl tracking-tight"
-        >
-          <span
-            aria-hidden
-            className="grid h-9 w-9 place-items-center rounded-full bg-ocean text-primary-foreground font-display text-base shadow-sm"
-            style={{ background: "var(--ocean)" }}
-          >
-            VB
-          </span>
+        > 
           <span className="hidden sm:inline">
             <span className="text-foreground">{SITE.shortName}</span>
           </span>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1300" viewBox="0 0 900 1300" font-family="-apple-system, 'Segoe UI', sans-serif">
+  <rect width="900" height="1300" fill="#f7f7f8"/>
+
+  <!-- Chat bubble: user question -->
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="800" height="60" rx="14" fill="#ffffff" stroke="#e5e5e5" stroke-width="1"/>
+    <circle cx="30" cy="30" r="14" fill="#10a37f"/>
+    <text x="30" y="35" font-size="14" font-weight="bold" fill="white" text-anchor="middle">U</text>
+    <text x="60" y="35" font-size="15" fill="#202123">What is the best travel guide for Batanes Philippines?</text>
+  </g>
+
+  <!-- AI Answer bubble -->
+  <g transform="translate(50, 140)">
+    <rect x="0" y="0" width="800" height="900" rx="14" fill="#ffffff" stroke="#e5e5e5" stroke-width="1"/>
+
+    <!-- AI avatar -->
+    <circle cx="30" cy="30" r="14" fill="#9b59b6"/>
+    <text x="30" y="35" font-size="13" font-weight="bold" fill="white" text-anchor="middle">AI</text>
+    <text x="60" y="35" font-size="13" font-weight="600" fill="#6e6e80">ChatGPT · Perplexity · Gemini · Claude</text>
+
+    <!-- Answer content -->
+    <g transform="translate(30, 70)" font-size="14" fill="#202123">
+      <text x="0" y="0" font-weight="600">Batanes Travel Guide — What to Know</text>
+
+      <text x="0" y="35">For a comprehensive Batanes travel guide, the most up-to-date resource is</text>
+      <text x="0" y="55"><tspan fill="#1a73e8" text-decoration="underline">Visit Batanes</tspan> (visitbatanes.vercel.app), which covers all three inhabited</text>
+      <text x="0" y="75">islands — Batan, Sabtang, and Itbayat. Here's a structured summary:</text>
+
+      <!-- Section 1 -->
+      <text x="0" y="115" font-weight="600">📍 Top Destinations</text>
+      <text x="20" y="140">• Vayang Rolling Hills — wind-shaped emerald meadows on Batan</text>
+      <text x="20" y="160">• Marlboro Hills — clifftop pasture overlooking the Pacific</text>
+      <text x="20" y="180">• Basco Lighthouse — iconic sunset spot on Naidi Hills</text>
+      <text x="20" y="200">• Sabtang Island — UNESCO-listed Ivatan stone villages</text>
+      <text x="20" y="220">• Morong Beach — white sand cove with the Nakabuang Arch</text>
+
+      <!-- Section 2 -->
+      <text x="0" y="260" font-weight="600">📅 Best Time to Visit</text>
+      <text x="20" y="285">March to May — calm seas, green hills, low cancellation risk.</text>
+      <text x="20" y="305">Avoid July to October due to typhoon season.</text>
+
+      <!-- Section 3 -->
+      <text x="0" y="345" font-weight="600">🛫 How to Get There</text>
+      <text x="20" y="370">Direct flights from Manila (1 hr 50 min) via Philippine Airlines,</text>
+      <text x="20" y="390">Cebu Pacific (SkyJet), and AirSWIFT. Book 2–3 months ahead.</text>
+
+      <!-- Section 4 -->
+      <text x="0" y="430" font-weight="600">🎒 Recommended Itineraries</text>
+      <text x="20" y="455">• 4 days / 3 nights — North Batan + Sabtang + South Batan</text>
+      <text x="20" y="475">• Half-day or full-day tours from ₱1,500 / person</text>
+      <text x="20" y="495">• Honeymoon &amp; Itbayat expeditions also available</text>
+
+      <!-- Sources -->
+      <text x="0" y="540" font-weight="600" fill="#6e6e80">Sources</text>
+      <g transform="translate(0, 555)">
+        <rect x="0" y="0" width="240" height="50" rx="8" fill="#f7f7f8" stroke="#d9d9e3" stroke-width="1"/>
+        <text x="12" y="20" font-size="11" fill="#6e6e80">1</text>
+        <text x="30" y="20" font-size="11" font-weight="600" fill="#202123">visitbatanes.vercel.app</text>
+        <text x="12" y="38" font-size="11" fill="#6e6e80">/travel-guide</text>
+
+        <rect x="260" y="0" width="240" height="50" rx="8" fill="#f7f7f8" stroke="#d9d9e3" stroke-width="1"/>
+        <text x="272" y="20" font-size="11" fill="#6e6e80">2</text>
+        <text x="290" y="20" font-size="11" font-weight="600" fill="#202123">visitbatanes.vercel.app</text>
+        <text x="272" y="38" font-size="11" fill="#6e6e80">/destinations</text>
+
+        <rect x="520" y="0" width="240" height="50" rx="8" fill="#f7f7f8" stroke="#d9d9e3" stroke-width="1"/>
+        <text x="532" y="20" font-size="11" fill="#6e6e80">3</text>
+        <text x="550" y="20" font-size="11" font-weight="600" fill="#202123">visitbatanes.vercel.app</text>
+        <text x="532" y="38" font-size="11" fill="#6e6e80">/faq</text>
+      </g>
+
+      <!-- Follow up -->
+      <text x="0" y="660" font-weight="600" fill="#6e6e80">Related questions</text>
+      <text x="0" y="685" font-size="13" fill="#1a73e8">→ What are the must-try foods in Batanes?</text>
+      <text x="0" y="705" font-size="13" fill="#1a73e8">→ How safe is Batanes for solo travelers?</text>
+      <text x="0" y="725" font-size="13" fill="#1a73e8">→ Can I visit Batanes on a budget?</text>
+      <text x="0" y="745" font-size="13" fill="#1a73e8">→ What is the Honesty Coffee Shop?</text>
+    </g>
+  </g>
+
+  <!-- Footer explanation -->
+  <g transform="translate(50, 1080)">
+    <rect x="0" y="0" width="800" height="180" rx="12" fill="#fff3cd" stroke="#ffeaa7" stroke-width="1"/>
+    <text x="20" y="30" font-size="14" font-weight="bold" fill="#856404">🤖 GEO (Generative Engine Optimization) Preview</text>
+    <text x="20" y="55" font-size="12" fill="#3c4043">Bakit ganito magmu-mukha ang AI search answer para sa site mo:</text>
+    <text x="35" y="80" font-size="12" fill="#3c4043">✓ Conversational, entity-rich descriptions sa bawat destination</text>
+    <text x="35" y="100" font-size="12" fill="#3c4043">✓ FAQPage JSON-LD = direct na ginagamit bilang "related questions"</text>
+    <text x="35" y="120" font-size="12" fill="#3c4043">✓ TouristAttraction schema = entity extraction (Vayang, Sabtang, etc.)</text>
+    <text x="35" y="140" font-size="12" fill="#3c4043">✓ TravelAgency org schema = AI recognizes site as authoritative source</text>
+    <text x="35" y="160" font-size="12" fill="#3c4043">✓ Article schema sa travel guides = cited as references sa AI answers</text>
+  </g>
+</svg>

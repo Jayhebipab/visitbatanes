@@ -6,6 +6,7 @@ import { Reveal } from "@/components/reveal";
 import { CtaBooking } from "@/components/cta-booking";
 import { CheckIcon, MinusIcon } from "@/components/icons";
 import { tours } from "@/lib/data/tours";
+import { testimonials } from "@/lib/data/testimonials";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -15,21 +16,54 @@ export const metadata: Metadata = {
   alternates: { canonical: "/tours" },
 };
 
+const aggregateRating = (() => {
+  const total = testimonials.reduce((sum, t) => sum + t.rating, 0);
+  return {
+    "@type": "AggregateRating",
+    ratingValue: (total / testimonials.length).toFixed(1),
+    reviewCount: testimonials.length,
+    bestRating: 5,
+    worstRating: 1,
+  };
+})();
+
 export default function ToursPage() {
-  const offerCatalogLd = {
+  const itemListLd = {
     "@context": "https://schema.org",
-    "@type": "OfferCatalog",
+    "@type": "ItemList",
     name: "Batanes Tour Packages",
     url: `${SITE.url}/tours`,
-    itemListElement: tours.map((t) => ({
-      "@type": "TouristTrip",
-      name: t.title,
-      description: t.highlights.join(", "),
-      offers: {
-        "@type": "Offer",
-        price: t.price,
-        priceCurrency: "PHP",
-        availability: "https://schema.org/InStock",
+    numberOfItems: tours.length,
+    itemListElement: tours.map((t, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "TouristTrip",
+        "@id": `${SITE.url}/tours#${t.slug}`,
+        name: t.title,
+        description: `${t.duration} · ${t.level} · Highlights: ${t.highlights.join(", ")}`,
+        image: t.image.startsWith("http") ? t.image : `${SITE.url}${t.image}`,
+        touristType: t.category,
+        itinerary: t.itinerary.map((step) => ({
+          "@type": "ItemList",
+          name: step.day,
+          description: `${step.title}: ${step.details}`,
+        })),
+        offers: {
+          "@type": "Offer",
+          price: t.price,
+          priceCurrency: "PHP",
+          priceValidUntil: "2026-12-31",
+          availability: "https://schema.org/InStock",
+          url: `${SITE.url}/tours#${t.slug}`,
+          eligibleQuantity: {
+            "@type": "QuantitativeValue",
+            minValue: 2,
+            unitText: "guests",
+          },
+        },
+        provider: { "@id": `${SITE.url}/#organization` },
+        aggregateRating,
       },
     })),
   };
@@ -38,7 +72,7 @@ export default function ToursPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerCatalogLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
       />
 
       <Section
