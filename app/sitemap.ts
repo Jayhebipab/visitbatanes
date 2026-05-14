@@ -21,7 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.7,
-    images: [d.image],
   }));
 
   const guideRoutes: MetadataRoute.Sitemap = guides.map((g) => ({
@@ -29,7 +28,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(g.date),
     changeFrequency: "monthly",
     priority: 0.6,
-    images: [g.image],
   }));
 
   return [...staticRoutes, ...destinationRoutes, ...guideRoutes];
