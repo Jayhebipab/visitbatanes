@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#062e3f"/>
+      <stop offset="55%" stop-color="#0a4d68"/>
+      <stop offset="100%" stop-color="#1a7a99"/>
+    </linearGradient>
+    <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5fb487"/>
+      <stop offset="100%" stop-color="#2d6a47"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6d2a1"/>
+      <stop offset="100%" stop-color="#c39348"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="930" cy="220" r="120" fill="url(#sun)" opacity="0.95"/>
+  <path d="M0,520 C200,420 400,500 600,440 C800,380 1000,440 1200,400 L1200,630 L0,630 Z" fill="url(#hill)"/>
+  <path d="M0,560 C220,500 460,540 700,490 C880,455 1040,490 1200,470 L1200,630 L0,630 Z" fill="#0a4d68" opacity="0.6"/>
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#fbfaf6">
+    <text x="80" y="200" font-size="44" letter-spacing="6" opacity="0.85">VISIT BATANES</text>
+    <text x="80" y="320" font-size="86" font-style="italic">The northernmost</text>
+    <text x="80" y="410" font-size="86" font-style="italic">paradise of the</text>
+    <text x="80" y="500" font-size="86" font-style="italic">Philippines.</text>
+  </g>
+  <g font-family="system-ui, -apple-system, sans-serif" fill="#fbfaf6" opacity="0.8">
+    <text x="80" y="570" font-size="22">visitbatanes.ph — destinations · tours · travel guides</text>
+  </g>
+</svg>
