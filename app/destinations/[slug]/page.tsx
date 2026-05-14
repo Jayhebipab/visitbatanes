@@ -133,6 +133,19 @@ export default async function DestinationDetail({
       addressLocality: d.island,
     },
     publicAccess: true,
+  };
+
+  // Reviews + ratings need a Product/Service parent (Google's requirement).
+  // We emit a separate Product node representing "the experience of visiting <destination>".
+  const experienceLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `${SITE.url}/destinations/${d.slug}#experience`,
+    name: `Visit ${d.name}`,
+    description: d.shortDescription,
+    image: d.image,
+    brand: { "@id": `${SITE.url}/#organization` },
+    category: d.category,
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: rating.value,
@@ -176,6 +189,10 @@ export default async function DestinationDetail({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(placeLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(experienceLd) }}
       />
       {faqLd && (
         <script

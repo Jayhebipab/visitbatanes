@@ -38,11 +38,13 @@ export default function ToursPage() {
       "@type": "ListItem",
       position: i + 1,
       item: {
-        "@type": "TouristTrip",
+        "@type": ["Product", "TouristTrip"],
         "@id": `${SITE.url}/tours#${t.slug}`,
         name: t.title,
         description: `${t.duration} · ${t.level} · Highlights: ${t.highlights.join(", ")}`,
         image: t.image.startsWith("http") ? t.image : `${SITE.url}${t.image}`,
+        brand: { "@id": `${SITE.url}/#organization` },
+        category: t.category,
         touristType: t.category,
         itinerary: t.itinerary.map((step) => ({
           "@type": "ItemList",
