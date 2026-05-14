@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Fraunces } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { SITE } from "@/lib/site";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -7,6 +8,10 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { BackToTop } from "@/components/back-to-top";
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const GSC_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION;
+const BING_VERIFICATION = process.env.BING_SITE_VERIFICATION;
 
 const inter = Inter({
   variable: "--font-inter",
@@ -94,6 +99,12 @@ export const metadata: Metadata = {
     },
   },
   icons: { icon: "/favicon.ico" },
+  verification: {
+    google: GSC_VERIFICATION,
+    other: BING_VERIFICATION
+      ? { "msvalidate.01": BING_VERIFICATION }
+      : undefined,
+  },
 };
 
 export default function RootLayout({
@@ -154,6 +165,7 @@ export default function RootLayout({
           <Footer />
           <BackToTop />
         </ThemeProvider>
+        {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
       </body>
     </html>
   );

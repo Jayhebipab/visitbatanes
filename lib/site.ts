@@ -4,7 +4,8 @@ export const SITE = {
   tagline: "The Northernmost Paradise of the Philippines",
   description:
     "Discover Batanes — rolling hills, Ivatan stone villages, dramatic cliffs, and lighthouses at the edge of the Philippines. Plan your tours, find destinations, and read travel guides crafted for an unforgettable Batanes journey.",
-  url: "https://visitbatanes.ph",
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://visitbatanes.vercel.app",
   ogImage: "/og-default.svg",
   email: "hello@visitbatanes.ph",
   phone: "+63 (917) 555-1928",
