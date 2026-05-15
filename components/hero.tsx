@@ -24,22 +24,22 @@ export function Hero() {
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"
+          className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/45 to-black/75"
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(76,184,217,0.25),transparent_60%)]"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(76,184,217,0.14),transparent_55%)]"
         />
       </div>
 
-      <div className="container-x relative pt-28 pb-24 md:pt-36 md:pb-32 lg:pt-44 lg:pb-40 text-white">
+      <div className="container-x relative pt-24 pb-20 md:pt-28 md:pb-24 lg:pt-32 lg:pb-28 text-white">
         <motion.p
           initial={reduce ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs uppercase tracking-[0.22em] text-white/90 backdrop-blur"
+          className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3.5 py-1.5 text-[11px] uppercase tracking-[0.18em] text-white/85 backdrop-blur"
         >
-          <MapPinIcon size={14} />
+          <MapPinIcon size={13} />
           Batanes · Philippines
         </motion.p>
 
@@ -48,18 +48,18 @@ export function Hero() {
           initial={reduce ? false : { opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.05 }}
-          className="heading-display mt-6 max-w-4xl text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem]"
+          className="heading-display mt-5 max-w-3xl text-[2.25rem] leading-[1.08] sm:text-5xl md:text-[3.25rem] lg:text-[3.75rem]"
         >
           Where the wind shapes
           <br />
-          <span className="italic font-light">paradise.</span>
+          <span className="italic font-light text-white/90">paradise.</span>
         </motion.h1>
 
         <motion.p
           initial={reduce ? false : { opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.12 }}
-          className="mt-6 max-w-2xl text-lg text-white/85 leading-relaxed"
+          className="mt-5 max-w-xl text-sm md:text-base text-white/80 leading-relaxed"
         >
           Discover Batanes — the northernmost province of the Philippines.
           Rolling Ivatan pastures, centuries-old stone villages, lighthouses
@@ -71,21 +71,21 @@ export function Hero() {
           initial={reduce ? false : { opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-9 flex flex-wrap items-center gap-3"
+          className="mt-7 flex flex-wrap items-center gap-2.5"
         >
           <Link
             href="/tours"
-            className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-medium text-foreground transition-transform hover:scale-[1.02]"
+            className="group inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-foreground transition-transform hover:scale-[1.02]"
           >
             Plan your journey
             <ArrowRightIcon
-              size={16}
+              size={15}
               className="transition-transform group-hover:translate-x-1"
             />
           </Link>
           <Link
             href="/destinations"
-            className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/5 px-6 py-3.5 text-sm font-medium text-white hover:bg-white/15"
+            className="inline-flex items-center gap-2 rounded-full border border-white/35 bg-white/5 px-5 py-3 text-sm font-medium text-white hover:bg-white/15"
           >
             Explore destinations
           </Link>
@@ -95,7 +95,7 @@ export function Hero() {
           initial={reduce ? false : { opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-14 grid max-w-3xl grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4"
+          className="mt-12 grid max-w-2xl grid-cols-2 gap-x-5 gap-y-5 sm:grid-cols-4"
         >
           {[
             { label: "Islands", value: "10+" },
@@ -103,11 +103,11 @@ export function Hero() {
             { label: "Boutique tours", value: "12" },
             { label: "Avg. flight (min)", value: "110" },
           ].map((s) => (
-            <div key={s.label} className="border-l border-white/25 pl-4">
-              <dt className="text-xs uppercase tracking-[0.18em] text-white/70">
+            <div key={s.label} className="border-l border-white/20 pl-3.5">
+              <dt className="text-[10px] uppercase tracking-[0.16em] text-white/60">
                 {s.label}
               </dt>
-              <dd className="mt-1 font-display text-3xl text-white">
+              <dd className="mt-1 font-display text-2xl text-white">
                 {s.value}
               </dd>
             </div>

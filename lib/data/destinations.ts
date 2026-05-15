@@ -21,8 +21,7 @@ export const destinations: Destination[] = [
     entryFee: "Free",
     difficulty: "Easy",
     coords: { lat: 20.4523, lng: 121.9587 },
-    image:
-      "https://images.unsplash.com/photo-1518563259479-d003eb6e2924?auto=format&fit=crop&w=1920&q=80",
+     image: "/image/vayangroll.jpg",
     imageAlt:
       "Vayang Rolling Hills with emerald slopes meeting the blue sea in Batanes",
     gallery: [
@@ -224,8 +223,7 @@ export const destinations: Destination[] = [
     entryFee: "₱200 environmental fee; faluwa boat fare separate",
     difficulty: "Moderate",
     coords: { lat: 20.3147, lng: 121.8642 },
-    image:
-      "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1920&q=80",
+    image: "/image/SABTANG_ISLAND.jpg",
     imageAlt:
       "Limestone arch and white sand beach with turquoise water on Sabtang Island",
     gallery: [

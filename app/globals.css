@@ -3,41 +3,43 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
+  /* Light mode — warm paper white, soft ink, muted accents */
   --background: #fbfaf6;
-  --foreground: #0e1a24;
-  --muted: #f1ede2;
-  --muted-foreground: #5b6470;
+  --foreground: #1a2530;
+  --muted: #f3efe5;
+  --muted-foreground: #6b7280;
   --card: #ffffff;
-  --card-foreground: #0e1a24;
-  --border: #e6e1d2;
-  --primary: #0a4d68;
+  --card-foreground: #1a2530;
+  --border: #e7e2d4;
+  --primary: #155a76;
   --primary-foreground: #fbfaf6;
-  --accent: #c39348;
-  --accent-foreground: #0e1a24;
-  --ring: #0a4d68;
-  --ocean: #0a4d68;
-  --ocean-deep: #062e3f;
+  --accent: #b58849;
+  --accent-foreground: #1a2530;
+  --ring: #155a76;
+  --ocean: #155a76;
+  --ocean-deep: #0a3a52;
   --sand: #e8d8b0;
-  --sunrise: #e07a2e;
+  --sunrise: #d8843a;
 }
 
 .dark {
-  --background: #07121a;
-  --foreground: #f1efe7;
-  --muted: #122230;
-  --muted-foreground: #97a3b1;
-  --card: #0d1c28;
-  --card-foreground: #f1efe7;
-  --border: #1d2f3d;
-  --primary: #4cb8d9;
-  --primary-foreground: #07121a;
-  --accent: #e0b067;
-  --accent-foreground: #07121a;
-  --ring: #4cb8d9;
-  --ocean: #4cb8d9;
-  --ocean-deep: #0a3144;
-  --sand: #d8c48a;
-  --sunrise: #f59247;
+  /* Dark mode — deep ink, gentle cream, calmer cyans */
+  --background: #0a1620;
+  --foreground: #e9e5d8;
+  --muted: #15242f;
+  --muted-foreground: #8d97a3;
+  --card: #11202b;
+  --card-foreground: #e9e5d8;
+  --border: #1f3140;
+  --primary: #5ec0dd;
+  --primary-foreground: #0a1620;
+  --accent: #d4a76a;
+  --accent-foreground: #0a1620;
+  --ring: #5ec0dd;
+  --ocean: #5ec0dd;
+  --ocean-deep: #0c3447;
+  --sand: #d4be88;
+  --sunrise: #e89656;
 }
 
 @theme inline {
@@ -124,13 +126,13 @@ body {
 
 .heading-display {
   font-family: var(--font-display);
-  letter-spacing: -0.02em;
-  font-weight: 500;
-  line-height: 1.05;
+  letter-spacing: -0.015em;
+  font-weight: 450;
+  line-height: 1.12;
 }
 
 .section-pad {
-  padding-block: clamp(4rem, 8vw, 7rem);
+  padding-block: clamp(3rem, 6vw, 5.5rem);
 }
 
 .container-x {
