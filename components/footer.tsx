@@ -32,7 +32,7 @@ export function Footer() {
             className="flex items-center gap-3 font-display text-xl"
           >
             <Image
-              src="/public/logo-mark.svg"
+              src="/logo-mark.svg"
               alt=""
               width={48}
               height={48}
