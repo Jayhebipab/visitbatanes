@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="64" viewBox="0 0 280 64" role="img" aria-label="Visit Batanes — The Northernmost Paradise of the Philippines">
+  <title>Visit Batanes</title>
+  <defs>
+    <linearGradient id="wm-sky" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#1a7a99"/>
+      <stop offset="60%" stop-color="#0a4d68"/>
+      <stop offset="100%" stop-color="#062e3f"/>
+    </linearGradient>
+    <linearGradient id="wm-hills" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#7dc99a"/>
+      <stop offset="100%" stop-color="#2d6a47"/>
+    </linearGradient>
+    <radialGradient id="wm-sun" cx="0.4" cy="0.4" r="0.55">
+      <stop offset="0%" stop-color="#fbe7c2"/>
+      <stop offset="55%" stop-color="#e0b067"/>
+      <stop offset="100%" stop-color="#c39348"/>
+    </radialGradient>
+    <clipPath id="wm-circle">
+      <circle cx="32" cy="32" r="28"/>
+    </clipPath>
+  </defs>
+
+  <!-- Mark on left (scaled down to 56px) -->
+  <circle cx="32" cy="32" r="28" fill="url(#wm-sky)"/>
+  <g clip-path="url(#wm-circle)">
+    <circle cx="41" cy="22" r="13" fill="#fbe7c2" opacity="0.18"/>
+    <circle cx="41" cy="22" r="6" fill="url(#wm-sun)"/>
+    <g fill="#fbfaf6" opacity="0.95">
+      <rect x="30.5" y="29" width="3" height="14" rx="0.4"/>
+      <rect x="29.5" y="33" width="5" height="1" opacity="0.7"/>
+      <polygon points="29,28.4 35,28.4 32,24.5"/>
+      <circle cx="32" cy="26" r="1" fill="#e0b067"/>
+    </g>
+    <path d="M 2 44 Q 14 36 25 39 Q 36 42 47 36 T 62 38 L 62 60 L 2 60 Z" fill="url(#wm-hills)"/>
+    <path d="M 2 50 Q 15 43 28 46 Q 40 50 50 46 T 62 47 L 62 60 L 2 60 Z" fill="#062e3f" opacity="0.65"/>
+  </g>
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#fbfaf6" stroke-width="1.2" opacity="0.4"/>
+
+  <!-- Wordmark text — uses currentColor for theme-aware rendering -->
+  <g fill="currentColor">
+    <text x="76" y="34" font-family="Fraunces, 'Times New Roman', Georgia, serif" font-size="22" font-weight="500" letter-spacing="-0.3">
+      Visit Batanes
+    </text>
+    <text x="76" y="50" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="9" font-weight="500" letter-spacing="3" opacity="0.65">
+      NORTHERNMOST PHILIPPINES
+    </text>
+  </g>
+</svg>

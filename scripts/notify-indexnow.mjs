@@ -1,56 +1,52 @@
 #!/usr/bin/env node
 /**
  * Notifies IndexNow (Bing, Yandex, DuckDuckGo, Naver, Seznam) of all site URLs.
- * Run manually after deploy: `node scripts/notify-indexnow.mjs`
- * Or wire into Vercel deploy hook / GitHub Action.
  *
- * Notes:
- * - IndexNow accepts up to 10,000 URLs per request.
- * - Submitting the same URL repeatedly within a short window is rate-limited.
- *   Only run after meaningful content updates.
+ * Fetches the live sitemap.xml at run time so it always reflects the current
+ * deployed routes — no need to keep this script in sync with site data.
+ *
+ * Usage: node scripts/notify-indexnow.mjs
  */
-
-import { destinations } from "../lib/data/destinations.js";
-import { guides } from "../lib/data/guides.js";
 
 const HOST = "visitbatanes.vercel.app";
 const SITE_URL = `https://${HOST}`;
 const KEY = "f444cada7e18067a73fd144696ebb689";
 const KEY_LOCATION = `${SITE_URL}/${KEY}.txt`;
 
-const STATIC_PATHS = [
-  "/",
-  "/destinations",
-  "/tours",
-  "/travel-guide",
-  "/about",
-  "/faq",
-  "/contact",
-];
+console.log(`→ Fetching ${SITE_URL}/sitemap.xml…`);
 
-const urlList = [
-  ...STATIC_PATHS.map((p) => `${SITE_URL}${p}`),
-  ...destinations.map((d) => `${SITE_URL}/destinations/${d.slug}`),
-  ...guides.map((g) => `${SITE_URL}/travel-guide/${g.slug}`),
-];
+const sitemapRes = await fetch(`${SITE_URL}/sitemap.xml`);
+if (!sitemapRes.ok) {
+  console.error(`❌ Could not fetch sitemap (HTTP ${sitemapRes.status})`);
+  process.exit(1);
+}
+const xml = await sitemapRes.text();
+const urlList = Array.from(xml.matchAll(/<loc>([^<]+)<\/loc>/g)).map(
+  (m) => m[1]
+);
 
-const payload = {
-  host: HOST,
-  key: KEY,
-  keyLocation: KEY_LOCATION,
-  urlList,
-};
+if (urlList.length === 0) {
+  console.error("❌ No URLs found in sitemap.xml");
+  process.exit(1);
+}
 
 console.log(`→ Submitting ${urlList.length} URLs to IndexNow…`);
 
 const res = await fetch("https://api.indexnow.org/IndexNow", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(payload),
+  body: JSON.stringify({
+    host: HOST,
+    key: KEY,
+    keyLocation: KEY_LOCATION,
+    urlList,
+  }),
 });
 
 if (res.status === 200 || res.status === 202) {
-  console.log(`✅ Accepted (HTTP ${res.status}) — ${urlList.length} URLs queued.`);
+  console.log(
+    `✅ Accepted (HTTP ${res.status}) — ${urlList.length} URLs queued.`
+  );
   console.log(
     "   Bing, Yandex, DuckDuckGo, Naver, Seznam will crawl within minutes."
   );

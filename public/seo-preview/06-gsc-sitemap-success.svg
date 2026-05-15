@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1400" viewBox="0 0 1200 1400" font-family="Roboto, Arial, sans-serif">
+  <rect width="1200" height="1400" fill="#f5f5f5"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1200" height="56" fill="#ffffff" stroke="#e8eaed" stroke-width="1"/>
+  <text x="24" y="36" font-size="20" font-weight="400">
+    <tspan fill="#4285f4">G</tspan><tspan fill="#ea4335">o</tspan><tspan fill="#fbbc04">o</tspan><tspan fill="#4285f4">g</tspan><tspan fill="#34a853">l</tspan><tspan fill="#ea4335">e</tspan>
+    <tspan fill="#5f6368" font-size="18"> Search Console</tspan>
+  </text>
+  <text x="1176" y="35" font-size="14" fill="#5f6368" text-anchor="end">visitbatanes.vercel.app ▾</text>
+
+  <!-- Page heading -->
+  <text x="40" y="100" font-size="24" font-weight="500" fill="#202124">Sitemaps</text>
+  <text x="40" y="125" font-size="13" fill="#5f6368">After 24-48h, the sitemap successfully parses. Eto yung magmu-mukha:</text>
+
+  <!-- Add new sitemap card -->
+  <g transform="translate(40, 155)">
+    <rect x="0" y="0" width="1120" height="100" rx="8" fill="#ffffff" stroke="#dadce0" stroke-width="1"/>
+    <text x="24" y="35" font-size="16" font-weight="500" fill="#202124">Add a new sitemap</text>
+    <text x="24" y="75" font-size="14" fill="#5f6368">https://visitbatanes.vercel.app/</text>
+    <line x1="278" y1="80" x2="900" y2="80" stroke="#dadce0" stroke-width="1"/>
+    <text x="290" y="75" font-size="14" fill="#5f6368">Enter sitemap URL</text>
+    <rect x="950" y="55" width="120" height="40" rx="20" fill="#1a73e8"/>
+    <text x="1010" y="80" font-size="14" font-weight="500" fill="white" text-anchor="middle">SUBMIT</text>
+  </g>
+
+  <!-- Submitted sitemaps card -->
+  <g transform="translate(40, 290)">
+    <rect x="0" y="0" width="1120" height="180" rx="8" fill="#ffffff" stroke="#dadce0" stroke-width="1"/>
+    <text x="24" y="35" font-size="16" font-weight="500" fill="#202124">Submitted sitemaps</text>
+
+    <!-- Table header -->
+    <line x1="0" y1="60" x2="1120" y2="60" stroke="#e8eaed" stroke-width="1"/>
+    <text x="24" y="85" font-size="11" font-weight="500" fill="#5f6368" letter-spacing="0.5">SITEMAP</text>
+    <text x="280" y="85" font-size="11" font-weight="500" fill="#5f6368" letter-spacing="0.5">TYPE</text>
+    <text x="400" y="85" font-size="11" font-weight="500" fill="#5f6368" letter-spacing="0.5">SUBMITTED</text>
+    <text x="540" y="85" font-size="11" font-weight="500" fill="#5f6368" letter-spacing="0.5">LAST READ</text>
+    <text x="680" y="85" font-size="11" font-weight="500" fill="#5f6368" letter-spacing="0.5">STATUS</text>
+    <text x="820" y="85" font-size="11" font-weight="500" fill="#5f6368" letter-spacing="0.5">DISCOVERED PAGES</text>
+    <text x="1000" y="85" font-size="11" font-weight="500" fill="#5f6368" letter-spacing="0.5">DISCOVERED VIDEOS</text>
+
+    <!-- Row -->
+    <line x1="0" y1="100" x2="1120" y2="100" stroke="#e8eaed" stroke-width="1"/>
+    <text x="24" y="130" font-size="14" fill="#1a73e8" text-decoration="underline">/sitemap.xml</text>
+    <text x="280" y="130" font-size="14" fill="#202124">Sitemap</text>
+    <text x="400" y="130" font-size="14" fill="#202124">May 14, 2026</text>
+    <text x="540" y="130" font-size="14" fill="#202124">May 15, 2026</text>
+
+    <!-- Status: Success (changed from error to green) -->
+    <circle cx="690" cy="125" r="8" fill="#1e8e3e"/>
+    <text x="705" y="130" font-size="14" font-weight="500" fill="#1e8e3e">Success</text>
+
+    <text x="820" y="130" font-size="14" font-weight="500" fill="#202124">22</text>
+    <text x="1000" y="130" font-size="14" fill="#202124">0</text>
+  </g>
+
+  <!-- Detail panel -->
+  <g transform="translate(40, 510)">
+    <rect x="0" y="0" width="1120" height="220" rx="8" fill="#ffffff" stroke="#dadce0" stroke-width="1"/>
+
+    <text x="24" y="40" font-size="20" font-weight="500" fill="#202124">/sitemap.xml</text>
+    <text x="24" y="65" font-size="13" fill="#5f6368">Submitted May 14, 2026 · Last read May 15, 2026</text>
+
+    <!-- Stats grid -->
+    <g transform="translate(24, 90)">
+      <text x="0" y="0" font-size="12" fill="#5f6368">Status</text>
+      <circle cx="8" cy="22" r="6" fill="#1e8e3e"/>
+      <text x="22" y="27" font-size="16" font-weight="500" fill="#1e8e3e">Success</text>
+
+      <text x="180" y="0" font-size="12" fill="#5f6368">Discovered pages</text>
+      <text x="180" y="30" font-size="32" font-weight="400" fill="#202124">22</text>
+
+      <text x="380" y="0" font-size="12" fill="#5f6368">Discovered videos</text>
+      <text x="380" y="30" font-size="32" font-weight="400" fill="#202124">0</text>
+
+      <text x="580" y="0" font-size="12" fill="#5f6368">Indexed pages</text>
+      <text x="580" y="30" font-size="32" font-weight="400" fill="#0d8043">18</text>
+      <text x="640" y="30" font-size="12" fill="#5f6368">/ 22</text>
+
+      <text x="780" y="0" font-size="12" fill="#5f6368">Last successful read</text>
+      <text x="780" y="30" font-size="14" font-weight="500" fill="#202124">2 hours ago</text>
+    </g>
+
+    <line x1="24" y1="155" x2="1096" y2="155" stroke="#e8eaed" stroke-width="1"/>
+
+    <text x="24" y="185" font-size="13" fill="#5f6368">📄 See all indexed pages →</text>
+    <text x="280" y="185" font-size="13" fill="#5f6368">⏱ Refresh data</text>
+    <text x="480" y="185" font-size="13" fill="#5f6368">🗑 Remove sitemap</text>
+  </g>
+
+  <!-- Before/After comparison -->
+  <g transform="translate(40, 760)">
+    <text x="0" y="0" font-size="18" font-weight="500" fill="#202124">Before vs After</text>
+
+    <!-- Before column -->
+    <g transform="translate(0, 30)">
+      <rect x="0" y="0" width="540" height="280" rx="8" fill="#fce8e6" stroke="#f8c4be" stroke-width="1"/>
+      <text x="20" y="30" font-size="14" font-weight="bold" fill="#c5221f">❌ TODAY (May 14)</text>
+      <text x="20" y="60" font-size="13" fill="#202124">Status: 1 error (stale, from initial bad XML)</text>
+      <text x="20" y="85" font-size="13" fill="#202124">Discovered pages: 0</text>
+      <text x="20" y="110" font-size="13" fill="#202124">Indexed pages: 0</text>
+      <text x="20" y="135" font-size="13" fill="#202124">Searchable on Google: No</text>
+
+      <text x="20" y="180" font-size="12" fill="#5f6368">Anong reason:</text>
+      <text x="20" y="200" font-size="11" fill="#3c4043">• Initial sitemap had image:loc with unescaped &amp;</text>
+      <text x="20" y="220" font-size="11" fill="#3c4043">• Fixed na sa fresh push (afc62b2)</text>
+      <text x="20" y="240" font-size="11" fill="#3c4043">• Google hasn't re-parsed yet</text>
+      <text x="20" y="260" font-size="11" fill="#3c4043">• Stale error display sa GSC UI</text>
+    </g>
+
+    <!-- After column -->
+    <g transform="translate(580, 30)">
+      <rect x="0" y="0" width="540" height="280" rx="8" fill="#e6f4ea" stroke="#a8d5b9" stroke-width="1"/>
+      <text x="20" y="30" font-size="14" font-weight="bold" fill="#137333">✅ AFTER (in 24-48h)</text>
+      <text x="20" y="60" font-size="13" fill="#202124">Status: Success</text>
+      <text x="20" y="85" font-size="13" fill="#202124">Discovered pages: 22</text>
+      <text x="20" y="110" font-size="13" fill="#202124">Indexed pages: 18-22 (growing over weeks)</text>
+      <text x="20" y="135" font-size="13" fill="#202124">Searchable on Google: Yes</text>
+
+      <text x="20" y="180" font-size="12" fill="#5f6368">Anong gagawin ni Google:</text>
+      <text x="20" y="200" font-size="11" fill="#3c4043">• Re-fetch yung clean /sitemap.xml</text>
+      <text x="20" y="220" font-size="11" fill="#3c4043">• Parse the 22 URLs successfully</text>
+      <text x="20" y="240" font-size="11" fill="#3c4043">• Start crawling each page systematically</text>
+      <text x="20" y="260" font-size="11" fill="#3c4043">• Add pages sa search index gradually</text>
+    </g>
+  </g>
+
+  <!-- Bottom note -->
+  <g transform="translate(40, 1100)">
+    <rect x="0" y="0" width="1120" height="270" rx="12" fill="#fef7e0" stroke="#feefc3" stroke-width="1"/>
+    <text x="20" y="35" font-size="16" font-weight="bold" fill="#5f6368">🎯 Pag SUCCESS na — Anong unlocks?</text>
+
+    <g transform="translate(20, 60)" font-size="13">
+      <text x="0" y="0" font-weight="600" fill="#202124">1. Google starts crawling all 22 URLs</text>
+      <text x="0" y="20" fill="#3c4043">Within 2-7 days, lahat ng pages ay mai-index — even those wala mo manually i-request.</text>
+
+      <text x="0" y="55" font-weight="600" fill="#202124">2. Pages indexed metric starts climbing</text>
+      <text x="0" y="75" fill="#3c4043">GSC → Indexing → Pages: dadami yung "Indexed" count from 5 (your manual requests) → 22.</text>
+
+      <text x="0" y="110" font-weight="600" fill="#202124">3. First impressions sa Performance report</text>
+      <text x="0" y="130" fill="#3c4043">GSC → Performance: lalabas yung mga search queries na nag-trigger sa site mo, even kung walang clicks pa.</text>
+
+      <text x="0" y="165" font-weight="600" fill="#202124">4. AI search engines pick up the site</text>
+      <text x="0" y="185" fill="#3c4043">Bing (powers ChatGPT) discovers the site too. Perplexity, Claude follow within 1-2 weeks.</text>
+
+      <text x="0" y="220" font-weight="600" fill="#202124">5. Rich snippets start appearing</text>
+      <text x="0" y="240" fill="#3c4043">FAQ accordions, breadcrumbs, ⭐ ratings, "Tours from ₱1,500" pricing — all rendered in SERP.</text>
+    </g>
+  </g>
+</svg>

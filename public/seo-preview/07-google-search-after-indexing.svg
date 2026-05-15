@@ -1,0 +1,275 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1700" viewBox="0 0 1200 1700" font-family="Arial, sans-serif">
+  <rect width="1200" height="1700" fill="#ffffff"/>
+
+  <!-- Google header -->
+  <g transform="translate(30, 30)">
+    <text x="0" y="0" font-size="36" font-weight="500">
+      <tspan fill="#4285f4">G</tspan><tspan fill="#ea4335">o</tspan><tspan fill="#fbbc04">o</tspan><tspan fill="#4285f4">g</tspan><tspan fill="#34a853">l</tspan><tspan fill="#ea4335">e</tspan>
+    </text>
+    <rect x="140" y="-22" width="620" height="46" rx="23" fill="#ffffff" stroke="#dfe1e5" stroke-width="1"/>
+    <text x="170" y="8" font-size="17" fill="#202124">visit batanes</text>
+    <text x="720" y="8" font-size="22" fill="#4285f4">🔍</text>
+  </g>
+
+  <line x1="0" y1="85" x2="1200" y2="85" stroke="#ebebeb" stroke-width="1"/>
+
+  <!-- Tabs -->
+  <g transform="translate(30, 115)" font-size="14" fill="#5f6368">
+    <text x="0" y="0" fill="#1a73e8" font-weight="500">All</text>
+    <line x1="-5" y1="12" x2="25" y2="12" stroke="#1a73e8" stroke-width="3"/>
+    <text x="60" y="0">Images</text>
+    <text x="135" y="0">Videos</text>
+    <text x="205" y="0">News</text>
+    <text x="265" y="0">Maps</text>
+    <text x="330" y="0">Shopping</text>
+  </g>
+  <line x1="0" y1="135" x2="1200" y2="135" stroke="#ebebeb" stroke-width="1"/>
+
+  <!-- Stats -->
+  <text x="30" y="165" font-size="13" fill="#70757a">About 24,800 results (0.38 seconds)</text>
+
+  <!-- AI Overview -->
+  <g transform="translate(30, 190)">
+    <rect x="0" y="0" width="900" height="280" rx="14" fill="#f0f7ff" stroke="#d2e3fc" stroke-width="1"/>
+    <text x="20" y="30" font-size="15" font-weight="bold" fill="#1967d2">✨ AI Overview</text>
+
+    <text x="20" y="60" font-size="14" fill="#202124">**Visit Batanes** (visitbatanes.vercel.app) is the most complete online guide to</text>
+    <text x="20" y="80" font-size="14" fill="#202124">Batanes, the northernmost province of the Philippines. The site covers all three</text>
+    <text x="20" y="100" font-size="14" fill="#202124">inhabited islands — Batan, Sabtang, and Itbayat — with detailed info on:</text>
+
+    <text x="40" y="130" font-size="13" fill="#202124">• 12 destinations including Vayang Rolling Hills, Sabtang stone villages</text>
+    <text x="40" y="150" font-size="13" fill="#202124">• 6 tour packages from ₱1,500 (half-day) to ₱32,000 (5-day honeymoon)</text>
+    <text x="40" y="170" font-size="13" fill="#202124">• Best time to visit: March to May for calm seas and green hills</text>
+    <text x="40" y="190" font-size="13" fill="#202124">• Direct flights from Manila (1 hr 50 min)</text>
+
+    <text x="20" y="225" font-size="11" font-weight="500" fill="#5f6368">SOURCES</text>
+    <g transform="translate(20, 235)" font-size="11">
+      <rect x="0" y="0" width="200" height="32" rx="6" fill="#ffffff" stroke="#dadce0" stroke-width="1"/>
+      <text x="12" y="12" fill="#5f6368">visitbatanes.vercel.app</text>
+      <text x="12" y="26" fill="#202124" font-weight="500">/travel-guide</text>
+
+      <rect x="220" y="0" width="200" height="32" rx="6" fill="#ffffff" stroke="#dadce0" stroke-width="1"/>
+      <text x="232" y="12" fill="#5f6368">visitbatanes.vercel.app</text>
+      <text x="232" y="26" fill="#202124" font-weight="500">/destinations</text>
+
+      <rect x="440" y="0" width="200" height="32" rx="6" fill="#ffffff" stroke="#dadce0" stroke-width="1"/>
+      <text x="452" y="12" fill="#5f6368">visitbatanes.vercel.app</text>
+      <text x="452" y="26" fill="#202124" font-weight="500">/faq</text>
+
+      <rect x="660" y="0" width="200" height="32" rx="6" fill="#ffffff" stroke="#dadce0" stroke-width="1"/>
+      <text x="672" y="12" fill="#5f6368">visitbatanes.vercel.app</text>
+      <text x="672" y="26" fill="#202124" font-weight="500">/tours</text>
+    </g>
+  </g>
+
+  <!-- Knowledge Panel (right side) -->
+  <g transform="translate(960, 190)">
+    <rect x="0" y="0" width="210" height="600" rx="10" fill="#ffffff" stroke="#dadce0" stroke-width="1"/>
+
+    <!-- KP image -->
+    <rect x="0" y="0" width="210" height="120" fill="#062e3f" rx="10 10 0 0"/>
+    <circle cx="165" cy="40" r="22" fill="#c39348" opacity="0.95"/>
+    <path d="M 0 80 Q 50 70 100 75 T 210 70 L 210 120 L 0 120 Z" fill="#5fb487"/>
+
+    <text x="105" y="155" font-size="14" font-weight="600" fill="#202124" text-anchor="middle">Visit Batanes</text>
+    <text x="105" y="175" font-size="11" fill="#5f6368" text-anchor="middle">Travel agency</text>
+
+    <!-- Rating -->
+    <g transform="translate(20, 195)">
+      <text x="0" y="0" font-size="20" font-weight="600" fill="#202124">4.8</text>
+      <text x="38" y="0" font-size="14" fill="#fbbc04">★★★★★</text>
+      <text x="0" y="20" font-size="11" fill="#5f6368">6 Google reviews</text>
+    </g>
+
+    <line x1="20" y1="240" x2="190" y2="240" stroke="#e8eaed" stroke-width="1"/>
+
+    <!-- Address -->
+    <g transform="translate(20, 260)" font-size="11" fill="#202124">
+      <text x="0" y="0" font-weight="600" fill="#5f6368">ADDRESS</text>
+      <text x="0" y="20">National Road, Basco,</text>
+      <text x="0" y="35">Batanes 3900, Philippines</text>
+
+      <text x="0" y="65" font-weight="600" fill="#5f6368">HOURS</text>
+      <text x="0" y="85">Mon–Fri: 8 AM – 6 PM</text>
+      <text x="0" y="100">Sat: 9 AM – 1 PM</text>
+
+      <text x="0" y="130" font-weight="600" fill="#5f6368">PHONE</text>
+      <text x="0" y="150" fill="#1a73e8">+63 917 555 1928</text>
+
+      <text x="0" y="180" font-weight="600" fill="#5f6368">WEBSITE</text>
+      <text x="0" y="200" fill="#1a73e8">visitbatanes.vercel.app</text>
+    </g>
+
+    <line x1="20" y1="490" x2="190" y2="490" stroke="#e8eaed" stroke-width="1"/>
+
+    <text x="105" y="515" font-size="11" font-weight="600" fill="#5f6368" text-anchor="middle">PEOPLE ALSO ASK</text>
+    <text x="20" y="540" font-size="11" fill="#1a73e8">When is the best time?</text>
+    <text x="20" y="558" font-size="11" fill="#1a73e8">How do I get to Batanes?</text>
+    <text x="20" y="576" font-size="11" fill="#1a73e8">Is Batanes safe?</text>
+  </g>
+
+  <!-- Result 1: Homepage with sitelinks -->
+  <g transform="translate(30, 510)">
+    <circle cx="14" cy="-5" r="14" fill="#0a4d68"/>
+    <text x="14" y="0" font-size="14" font-weight="bold" fill="white" text-anchor="middle">V</text>
+
+    <text x="38" y="-10" font-size="12" fill="#202124">Visit Batanes</text>
+    <text x="38" y="8" font-size="11" fill="#5f6368">https://visitbatanes.vercel.app</text>
+
+    <text x="0" y="42" font-size="22" fill="#1a0dab">Visit Batanes — The Northernmost Paradise of the</text>
+    <text x="0" y="68" font-size="22" fill="#1a0dab">Philippines</text>
+
+    <text x="0" y="100" font-size="14" fill="#4d5156">Discover Batanes — rolling hills, Ivatan stone villages, dramatic cliffs, and</text>
+    <text x="0" y="120" font-size="14" fill="#4d5156">lighthouses at the edge of the Philippines. Plan your tours, find</text>
+    <text x="0" y="140" font-size="14" fill="#4d5156">destinations, and read travel guides.</text>
+
+    <!-- Rating in result -->
+    <g transform="translate(0, 165)">
+      <text x="0" y="0" font-size="14" font-weight="500" fill="#202124">⭐ 4.8</text>
+      <text x="40" y="0" font-size="14" fill="#5f6368">(6 reviews) · Travel agency · Basco, Batanes</text>
+    </g>
+
+    <!-- Sitelinks grid -->
+    <g transform="translate(0, 195)">
+      <g transform="translate(0, 0)">
+        <text x="0" y="0" font-size="16" fill="#1a0dab">Destinations</text>
+        <text x="0" y="20" font-size="13" fill="#4d5156">Browse all 12 must-visit spots</text>
+        <text x="0" y="38" font-size="13" fill="#4d5156">across Batan, Sabtang, Itbayat...</text>
+      </g>
+      <g transform="translate(220, 0)">
+        <text x="0" y="0" font-size="16" fill="#1a0dab">Tours &amp; Packages</text>
+        <text x="0" y="20" font-size="13" fill="#4d5156">Compare 6 curated tour</text>
+        <text x="0" y="38" font-size="13" fill="#4d5156">packages, half-day to 5-day...</text>
+      </g>
+      <g transform="translate(440, 0)">
+        <text x="0" y="0" font-size="16" fill="#1a0dab">Travel Guide</text>
+        <text x="0" y="20" font-size="13" fill="#4d5156">In-depth Batanes guides on</text>
+        <text x="0" y="38" font-size="13" fill="#4d5156">timing, food, itineraries...</text>
+      </g>
+      <g transform="translate(660, 0)">
+        <text x="0" y="0" font-size="16" fill="#1a0dab">FAQs</text>
+        <text x="0" y="20" font-size="13" fill="#4d5156">14 detailed answers to common</text>
+        <text x="0" y="38" font-size="13" fill="#4d5156">Batanes travel questions...</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Result 2: Destinations -->
+  <g transform="translate(30, 790)">
+    <circle cx="14" cy="-5" r="14" fill="#0a4d68"/>
+    <text x="14" y="0" font-size="14" font-weight="bold" fill="white" text-anchor="middle">V</text>
+
+    <text x="38" y="-10" font-size="12" fill="#202124">Visit Batanes</text>
+    <text x="38" y="8" font-size="11" fill="#5f6368">https://visitbatanes.vercel.app › destinations › vayang-rolling-hills</text>
+
+    <text x="0" y="40" font-size="22" fill="#1a0dab">Vayang Rolling Hills — Batan Island, Batanes</text>
+
+    <text x="0" y="68" font-size="14" fill="#4d5156">Vayang Rolling Hills is a sweeping coastal grassland on the western edge</text>
+    <text x="0" y="88" font-size="14" fill="#4d5156">of Batan Island. Locally called 'Racuh a Payaman', the hills roll</text>
+    <text x="0" y="108" font-size="14" fill="#4d5156">uninterrupted toward the South China Sea...</text>
+
+    <!-- Rating + price -->
+    <g transform="translate(0, 130)">
+      <text x="0" y="0" font-size="14" font-weight="500" fill="#202124">⭐ 4.8</text>
+      <text x="40" y="0" font-size="14" fill="#5f6368">(42 reviews) · Free entry · 1–2 hours · Best at sunset</text>
+    </g>
+  </g>
+
+  <!-- Result 3: Tours with rich features -->
+  <g transform="translate(30, 970)">
+    <circle cx="14" cy="-5" r="14" fill="#0a4d68"/>
+    <text x="14" y="0" font-size="14" font-weight="bold" fill="white" text-anchor="middle">V</text>
+
+    <text x="38" y="-10" font-size="12" fill="#202124">Visit Batanes</text>
+    <text x="38" y="8" font-size="11" fill="#5f6368">https://visitbatanes.vercel.app › tours</text>
+
+    <text x="0" y="40" font-size="22" fill="#1a0dab">Batanes Tours &amp; Packages — North Batan, South Batan,</text>
+    <text x="0" y="66" font-size="22" fill="#1a0dab">Sabtang, Itbayat</text>
+
+    <text x="0" y="92" font-size="14" fill="#4d5156">Compare Batanes tour packages and itineraries. From half-day North Batan</text>
+    <text x="0" y="112" font-size="14" fill="#4d5156">loops to full 5-day honeymoon experiences across Sabtang and Itbayat.</text>
+
+    <!-- Rating + prices -->
+    <g transform="translate(0, 135)">
+      <text x="0" y="0" font-size="14" font-weight="500" fill="#202124">⭐ 5.0</text>
+      <text x="40" y="0" font-size="14" fill="#5f6368">(6 reviews) · From ₱1,500/person · 6 tours available</text>
+    </g>
+
+    <!-- Tour list rich snippet -->
+    <g transform="translate(0, 160)">
+      <rect x="0" y="0" width="900" height="120" rx="8" fill="#ffffff" stroke="#dadce0" stroke-width="1"/>
+
+      <g transform="translate(15, 20)">
+        <text x="0" y="0" font-size="13" font-weight="500" fill="#202124">North Batan Half-Day Discovery</text>
+        <text x="0" y="18" font-size="12" fill="#5f6368">Half day · From ₱1,500</text>
+      </g>
+
+      <g transform="translate(15, 65)">
+        <text x="0" y="0" font-size="13" font-weight="500" fill="#202124">Sabtang Island Day Tour</text>
+        <text x="0" y="18" font-size="12" fill="#5f6368">Full day · From ₱3,200</text>
+      </g>
+
+      <g transform="translate(310, 20)">
+        <text x="0" y="0" font-size="13" font-weight="500" fill="#202124">South Batan Heritage Tour</text>
+        <text x="0" y="18" font-size="12" fill="#5f6368">Full day · From ₱2,500</text>
+      </g>
+
+      <g transform="translate(310, 65)">
+        <text x="0" y="0" font-size="13" font-weight="500" fill="#202124">Complete Batanes (4D3N)</text>
+        <text x="0" y="18" font-size="12" fill="#5f6368">4 days · From ₱18,500</text>
+      </g>
+
+      <g transform="translate(605, 20)">
+        <text x="0" y="0" font-size="13" font-weight="500" fill="#202124">Itbayat Expedition</text>
+        <text x="0" y="18" font-size="12" fill="#5f6368">2 days · From ₱9,500</text>
+      </g>
+
+      <g transform="translate(605, 65)">
+        <text x="0" y="0" font-size="13" font-weight="500" fill="#202124">Honeymoon Package</text>
+        <text x="0" y="18" font-size="12" fill="#5f6368">5 days · From ₱32,000</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Result 4: FAQ with rich snippet -->
+  <g transform="translate(30, 1330)">
+    <circle cx="14" cy="-5" r="14" fill="#0a4d68"/>
+    <text x="14" y="0" font-size="14" font-weight="bold" fill="white" text-anchor="middle">V</text>
+
+    <text x="38" y="-10" font-size="12" fill="#202124">Visit Batanes</text>
+    <text x="38" y="8" font-size="11" fill="#5f6368">https://visitbatanes.vercel.app › faq</text>
+
+    <text x="0" y="40" font-size="22" fill="#1a0dab">FAQs — Batanes Travel, Booking, Safety, Culture &amp;</text>
+    <text x="0" y="66" font-size="22" fill="#1a0dab">Itinerary</text>
+
+    <text x="0" y="92" font-size="14" fill="#4d5156">Detailed answers to the most common Batanes travel questions: best</text>
+    <text x="0" y="112" font-size="14" fill="#4d5156">time to visit, how to get there, safety, transportation, culture, food...</text>
+
+    <!-- FAQ expandable rich snippet -->
+    <g transform="translate(0, 135)">
+      <rect x="0" y="0" width="900" height="180" rx="8" fill="#ffffff" stroke="#dadce0" stroke-width="1"/>
+
+      <text x="15" y="25" font-size="13" font-weight="500" fill="#202124">When is the best time to visit Batanes?</text>
+      <text x="880" y="25" font-size="16" fill="#5f6368" text-anchor="end">▾</text>
+      <text x="15" y="50" font-size="12" fill="#4d5156">The most reliable months are March to early June, when seas are calm,</text>
+      <text x="15" y="68" font-size="12" fill="#4d5156">hills are still green, and flights are least likely to be cancelled.</text>
+
+      <line x1="15" y1="90" x2="880" y2="90" stroke="#e8eaed" stroke-width="0.5"/>
+      <text x="15" y="115" font-size="13" font-weight="500" fill="#202124">How do I get to Batanes?</text>
+      <text x="880" y="115" font-size="16" fill="#5f6368" text-anchor="end">▸</text>
+
+      <line x1="15" y1="135" x2="880" y2="135" stroke="#e8eaed" stroke-width="0.5"/>
+      <text x="15" y="160" font-size="13" font-weight="500" fill="#202124">Is Batanes safe for solo travelers?</text>
+      <text x="880" y="160" font-size="16" fill="#5f6368" text-anchor="end">▸</text>
+    </g>
+  </g>
+
+  <!-- Footer note -->
+  <g transform="translate(30, 1570)">
+    <rect x="0" y="0" width="1140" height="100" rx="12" fill="#e6f4ea" stroke="#a8d5b9" stroke-width="1"/>
+    <text x="20" y="30" font-size="14" font-weight="bold" fill="#137333">🎉 ITO ANG MAKIKITA SA GOOGLE PAG SUCCESS NA YUNG SITEMAP</text>
+    <text x="20" y="55" font-size="12" fill="#3c4043">Lahat ng above ay gagana kasi may proper structured data ka. AI Overview, Knowledge Panel, ⭐ ratings,</text>
+    <text x="20" y="73" font-size="12" fill="#3c4043">sitelinks, tour pricing, FAQ accordions — lahat naka-build na. Need lang i-discover ng Google ang 22 pages.</text>
+    <text x="20" y="91" font-size="12" font-weight="500" fill="#137333">Timeline: Sitemap success in 24-48h → first indexing in 3-7 days → full rich results in 2-4 weeks.</text>
+  </g>
+</svg>

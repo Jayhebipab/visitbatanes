@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Visit Batanes">
+  <title>Visit Batanes</title>
+  <defs>
+    <linearGradient id="vb-sky" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#1a7a99"/>
+      <stop offset="60%" stop-color="#0a4d68"/>
+      <stop offset="100%" stop-color="#062e3f"/>
+    </linearGradient>
+    <linearGradient id="vb-hills" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#7dc99a"/>
+      <stop offset="100%" stop-color="#2d6a47"/>
+    </linearGradient>
+    <radialGradient id="vb-sun" cx="0.4" cy="0.4" r="0.55">
+      <stop offset="0%" stop-color="#fbe7c2"/>
+      <stop offset="55%" stop-color="#e0b067"/>
+      <stop offset="100%" stop-color="#c39348"/>
+    </radialGradient>
+    <clipPath id="vb-circle">
+      <circle cx="32" cy="32" r="30"/>
+    </clipPath>
+  </defs>
+
+  <!-- Sky background -->
+  <circle cx="32" cy="32" r="30" fill="url(#vb-sky)"/>
+
+  <g clip-path="url(#vb-circle)">
+    <!-- Soft glow behind the sun -->
+    <circle cx="42" cy="22" r="14" fill="#fbe7c2" opacity="0.18"/>
+
+    <!-- Sun -->
+    <circle cx="42" cy="22" r="6.5" fill="url(#vb-sun)"/>
+
+    <!-- Lighthouse silhouette -->
+    <g fill="#fbfaf6" opacity="0.95">
+      <rect x="30.3" y="29" width="3.4" height="15" rx="0.4"/>
+      <rect x="29.2" y="33" width="5.6" height="1" opacity="0.7"/>
+      <polygon points="28.6,28.4 35.4,28.4 32,24.2"/>
+      <circle cx="32" cy="26" r="1.2" fill="#e0b067"/>
+    </g>
+
+    <!-- Far hill -->
+    <path d="M -2 44 Q 12 36 24 39 Q 36 42 48 36 T 66 38 L 66 66 L -2 66 Z" fill="url(#vb-hills)"/>
+
+    <!-- Near hill -->
+    <path d="M -2 50 Q 14 42 28 46 Q 42 50 52 46 T 66 47 L 66 66 L -2 66 Z" fill="#062e3f" opacity="0.65"/>
+
+    <!-- Subtle ocean line -->
+    <line x1="-2" y1="44" x2="66" y2="44" stroke="#fbe7c2" stroke-width="0.4" opacity="0.25"/>
+  </g>
+
+  <!-- Outer ring -->
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#fbfaf6" stroke-width="1.5" opacity="0.35"/>
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#062e3f" stroke-width="0.5" opacity="0.3"/>
+</svg>
