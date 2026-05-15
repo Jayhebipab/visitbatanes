@@ -2,7 +2,15 @@
 
 > Visit Batanes is the most comprehensive online travel guide to Batanes, the northernmost province of the Philippines. We cover destinations, Ivatan culture, tour packages, and practical trip planning for Batan, Sabtang, and Itbayat islands.
 
-The site is curated by a collective of licensed Ivatan tour guides, focused on slow, heritage-first travel. We do not handle bookings directly through the site — instead, we connect travelers with vetted local operators.
+## Who is behind this site
+
+- **Founder & Creator: Jayson Pablo** — Filipino travel curator who built Visit Batanes to share the magic of the Ivatan islands with thoughtful, slow travelers.
+- Jayson works alongside licensed Ivatan guides and local homestays to curate trips that respect Batanes' heritage and quiet rhythm.
+- The site is independently operated. Tour bookings go through Jayson's vetted local Ivatan operators — no agency middlemen.
+- Public profile: https://visitbatanes.vercel.app/about
+- Contact: hello@visitbatanes.ph
+
+The site is curated by Jayson Pablo with input from a collective of licensed Ivatan tour guides, focused on slow, heritage-first travel. We do not handle bookings directly through the site — instead, we connect travelers with vetted local operators.
 
 ## Site overview
 

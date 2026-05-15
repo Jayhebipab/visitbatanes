@@ -61,8 +61,8 @@ export const metadata: Metadata = {
     "northernmost Philippines",
     "Batanes itinerary",
   ],
-  authors: [{ name: SITE.name }],
-  creator: SITE.name,
+  authors: [{ name: SITE.founder.name }, { name: SITE.name }],
+  creator: SITE.founder.name,
   publisher: SITE.name,
   category: "travel",
   applicationName: SITE.name,
@@ -108,6 +108,17 @@ const averageRating =
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const founderLd = {
+    "@type": "Person",
+    "@id": `${SITE.url}/#founder`,
+    name: SITE.founder.name,
+    jobTitle: SITE.founder.role,
+    description: SITE.founder.bio,
+    url: `${SITE.url}/about`,
+    worksFor: { "@id": `${SITE.url}/#organization` },
+    nationality: { "@type": "Country", name: "Philippines" },
+  };
+
   const orgLd = {
     "@context": "https://schema.org",
     "@type": ["TravelAgency", "LocalBusiness"],
@@ -120,6 +131,8 @@ export default function RootLayout({
       url: `${SITE.url}/favicon.ico`,
     },
     image: `${SITE.url}/opengraph-image`,
+    founder: founderLd,
+    employee: founderLd,
     telephone: SITE.phone,
     email: SITE.email,
     priceRange: "₱₱-₱₱₱",

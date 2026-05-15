@@ -10,6 +10,14 @@ export const SITE = {
   email: "hello@visitbatanes.ph",
   phone: "+63 (917) 555-1928",
   address: "National Road, Basco, Batanes 3900, Philippines",
+  founder: {
+    name: "Jayson Pablo",
+    role: "Founder & Creator",
+    bio:
+      "Jayson Pablo founded Visit Batanes to share the magic of the Ivatan islands with thoughtful, slow travelers. Working alongside licensed Ivatan guides and local homestays, he curates trips that respect the heritage and quiet rhythm of Batanes.",
+    shortBio:
+      "Founder of Visit Batanes, working with Ivatan guides to share Batanes with thoughtful travelers.",
+  },
   socials: {
     facebook: "https://www.facebook.com/VisitBatanesPH",
     instagram: "https://www.instagram.com/VisitBatanesPH",

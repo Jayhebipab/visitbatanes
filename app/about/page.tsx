@@ -12,9 +12,9 @@ import { testimonials } from "@/lib/data/testimonials";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About Visit Batanes — Slow Travel, Local Hearts",
+  title: "About Visit Batanes — Founded by Jayson Pablo",
   description:
-    "Visit Batanes curates Ivatan-led tours and travel guides for slow, responsible, heritage-first journeys to the northernmost province of the Philippines.",
+    "Visit Batanes is founded by Jayson Pablo and curated alongside licensed Ivatan guides. We help thoughtful travelers plan slow, heritage-first trips to the northernmost province of the Philippines.",
   alternates: { canonical: "/about" },
 };
 
@@ -116,6 +116,84 @@ export default function AboutPage() {
             </Reveal>
           ))}
         </ul>
+      </Section>
+
+      <Section
+        eyebrow="Behind the site"
+        title={`Meet ${SITE.founder.name}, ${SITE.founder.role.toLowerCase()}.`}
+      >
+        <article
+          itemScope
+          itemType="https://schema.org/Person"
+          className="grid gap-10 lg:grid-cols-12 lg:items-center"
+        >
+          <Reveal className="lg:col-span-4">
+            <div className="relative aspect-square overflow-hidden rounded-3xl bg-gradient-to-br from-ocean to-accent">
+              <div className="absolute inset-0 grid place-items-center">
+                <span
+                  className="font-display text-[10rem] text-white/90"
+                  aria-hidden
+                >
+                  {SITE.founder.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")}
+                </span>
+              </div>
+              <div
+                aria-hidden
+                className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
+              />
+            </div>
+          </Reveal>
+
+          <Reveal className="lg:col-span-8" delay={0.08}>
+            <p className="text-xs uppercase tracking-[0.22em] text-accent">
+              {SITE.founder.role}
+            </p>
+            <h3
+              itemProp="name"
+              className="heading-display mt-2 text-3xl md:text-4xl"
+            >
+              {SITE.founder.name}
+            </h3>
+            <p
+              itemProp="description"
+              className="mt-5 text-base md:text-lg leading-relaxed text-muted-foreground"
+            >
+              {SITE.founder.bio}
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              The site is independently run, with content reviewed by Ivatan
+              partners on the ground. Every tour booking inquiry passes through
+              {" "}{SITE.founder.name.split(" ")[0]}&apos;s vetted local
+              operators — no agency middlemen, no upcharges.
+            </p>
+
+            <dl className="mt-8 grid grid-cols-2 gap-4 text-sm">
+              <div className="rounded-2xl border border-border/60 bg-card px-4 py-4">
+                <dt className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                  Role
+                </dt>
+                <dd itemProp="jobTitle" className="mt-1 font-medium">
+                  {SITE.founder.role}
+                </dd>
+              </div>
+              <div className="rounded-2xl border border-border/60 bg-card px-4 py-4">
+                <dt className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                  Based in
+                </dt>
+                <dd className="mt-1 font-medium">Philippines</dd>
+              </div>
+            </dl>
+
+            <link itemProp="url" href={`${SITE.url}/about`} />
+            <meta
+              itemProp="worksFor"
+              content={SITE.name}
+            />
+          </Reveal>
+        </article>
       </Section>
 
       <Section
