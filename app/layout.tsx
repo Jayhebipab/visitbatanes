@@ -184,6 +184,7 @@ export default function RootLayout({
     "@type": "WebSite",
     "@id": `${SITE.url}/#website`,
     name: SITE.name,
+    alternateName: ["VisitBatanes", "Visit Batanes PH"],
     url: SITE.url,
     inLanguage: "en-PH",
     publisher: { "@id": `${SITE.url}/#organization` },
@@ -195,6 +196,31 @@ export default function RootLayout({
       },
       "query-input": "required name=search_term_string",
     },
+  };
+
+  // Knowledge Graph entity — helps AI engines build authoritative entity profile
+  const entityLd = {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "@id": `${SITE.url}/#batanes`,
+    name: "Batanes",
+    alternateName: ["Batanes Islands", "Batanes Province"],
+    description:
+      "Batanes is the northernmost province of the Philippines, an archipelago of ten islands between Luzon and Taiwan. Three islands are inhabited: Batan, Sabtang, and Itbayat. Known for rolling hills, Ivatan stone villages, and traditional faluwa boats.",
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 20.4487,
+      longitude: 121.9702,
+    },
+    containsPlace: [
+      { "@type": "Place", name: "Batan Island" },
+      { "@type": "Place", name: "Sabtang Island" },
+      { "@type": "Place", name: "Itbayat Island" },
+    ],
+    sameAs: [
+      "https://en.wikipedia.org/wiki/Batanes",
+      "https://www.wikidata.org/wiki/Q3271",
+    ],
   };
 
   return (
@@ -211,6 +237,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(entityLd) }}
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">

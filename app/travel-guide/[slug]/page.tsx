@@ -82,7 +82,45 @@ export default async function GuideDetail({
       "@id": `${SITE.url}/travel-guide/${g.slug}`,
     },
     isPartOf: { "@id": `${SITE.url}/#website` },
+    // Speakable: tells voice assistants (Google Assistant, Alexa) which parts to read aloud
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".guide-tldr"],
+    },
   };
+
+  // HowTo schema for itinerary-style guides — AI engines love step-by-step content
+  const howToLd = g.body.some((b) => /itinerary|day \d/i.test(b.heading))
+    ? {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: g.title,
+        description: g.excerpt,
+        image: g.image,
+        totalTime: "P4D",
+        estimatedCost: {
+          "@type": "MonetaryAmount",
+          currency: "PHP",
+          value: "15000-25000",
+        },
+        supply: [
+          { "@type": "HowToSupply", name: "Round-trip flight from Manila" },
+          { "@type": "HowToSupply", name: "3-4 nights accommodation" },
+          { "@type": "HowToSupply", name: "Cash (limited ATMs)" },
+        ],
+        step: g.body
+          .filter((b) => /day \d|^morning|^afternoon|^arrival/i.test(b.heading))
+          .map((section, i) => ({
+            "@type": "HowToStep",
+            position: i + 1,
+            name: section.heading,
+            text: section.paragraphs.join(" "),
+            url: `${SITE.url}/travel-guide/${g.slug}#${section.heading
+              .toLowerCase()
+              .replace(/\s+/g, "-")}`,
+          })),
+      }
+    : null;
 
   const others = guides.filter((x) => x.slug !== g.slug).slice(0, 2);
 
@@ -92,6 +130,12 @@ export default async function GuideDetail({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
       />
+      {howToLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToLd) }}
+        />
+      )}
 
       <article>
         <header className="relative isolate overflow-hidden">
@@ -154,18 +198,71 @@ export default async function GuideDetail({
         </header>
 
         <div className="container-x pt-12 max-w-3xl">
-          {g.body.map((section) => (
-            <section key={section.heading} className="mt-10 first:mt-0">
-              <h2 className="heading-display text-2xl md:text-3xl">
-                {section.heading}
-              </h2>
-              <div className="mt-4 space-y-4 text-base md:text-lg leading-relaxed text-muted-foreground">
-                {section.paragraphs.map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
+          {/* Quick Answer / TL;DR — surfaces directly for AI engines + voice assistants */}
+          <aside
+            className="guide-tldr not-prose mb-8 rounded-2xl border border-accent/30 bg-accent/5 p-6"
+            aria-labelledby="quick-answer-heading"
+          >
+            <p
+              id="quick-answer-heading"
+              className="text-xs uppercase tracking-[0.22em] text-accent font-medium"
+            >
+              Quick Answer
+            </p>
+            <p className="mt-3 text-base md:text-lg leading-relaxed text-foreground">
+              {g.excerpt}
+            </p>
+            <dl className="mt-5 grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
+              <div>
+                <dt className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                  Reading time
+                </dt>
+                <dd className="mt-1 font-medium">{g.readTime}</dd>
               </div>
-            </section>
-          ))}
+              <div>
+                <dt className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                  Topics
+                </dt>
+                <dd className="mt-1 font-medium">{g.tags.join(" · ")}</dd>
+              </div>
+              <div>
+                <dt className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                  Last updated
+                </dt>
+                <dd className="mt-1 font-medium">
+                  <time dateTime={g.date}>
+                    {new Date(g.date).toLocaleDateString("en-PH", {
+                      year: "numeric",
+                      month: "long",
+                    })}
+                  </time>
+                </dd>
+              </div>
+            </dl>
+          </aside>
+
+          {g.body.map((section) => {
+            const sectionId = section.heading
+              .toLowerCase()
+              .replace(/[^a-z0-9]+/g, "-")
+              .replace(/^-|-$/g, "");
+            return (
+              <section
+                key={section.heading}
+                id={sectionId}
+                className="mt-10 first:mt-0 scroll-mt-28"
+              >
+                <h2 className="heading-display text-2xl md:text-3xl">
+                  {section.heading}
+                </h2>
+                <div className="mt-4 space-y-4 text-base md:text-lg leading-relaxed text-muted-foreground">
+                  {section.paragraphs.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+              </section>
+            );
+          })}
         </div>
 
         <Section

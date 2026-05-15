@@ -27,10 +27,20 @@ export default function FAQPage() {
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    inLanguage: "en-PH",
+    about: { "@type": "Place", name: "Batanes, Philippines" },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["[itemprop='name']", "[itemprop='text']"],
+    },
     mainEntity: faqs.map((f) => ({
       "@type": "Question",
       name: f.question,
-      acceptedAnswer: { "@type": "Answer", text: f.answer },
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.answer,
+        author: { "@type": "Organization", name: "Visit Batanes" },
+      },
     })),
   };
 
