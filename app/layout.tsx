@@ -128,7 +128,9 @@ export default function RootLayout({
     url: SITE.url,
     logo: {
       "@type": "ImageObject",
-      url: `${SITE.url}/favicon.ico`,
+      url: `${SITE.url}/logo-mark.svg`,
+      width: 64,
+      height: 64,
     },
     image: `${SITE.url}/opengraph-image`,
     founder: founderLd,

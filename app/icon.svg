@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="i-sky" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#1a7a99"/>
+      <stop offset="100%" stop-color="#062e3f"/>
+    </linearGradient>
+    <radialGradient id="i-sun" cx="0.4" cy="0.4" r="0.55">
+      <stop offset="0%" stop-color="#fbe7c2"/>
+      <stop offset="100%" stop-color="#c39348"/>
+    </radialGradient>
+    <clipPath id="i-circle">
+      <circle cx="32" cy="32" r="30"/>
+    </clipPath>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#i-sky)"/>
+  <g clip-path="url(#i-circle)">
+    <circle cx="42" cy="22" r="7" fill="url(#i-sun)"/>
+    <rect x="30.5" y="29" width="3" height="14" fill="#fbfaf6"/>
+    <polygon points="29,28 35,28 32,24" fill="#fbfaf6"/>
+    <path d="M -2 46 Q 14 38 28 41 Q 42 44 52 38 T 66 40 L 66 66 L -2 66 Z" fill="#5fb487"/>
+    <path d="M -2 52 Q 18 44 32 47 T 66 45 L 66 66 L -2 66 Z" fill="#2d6a47"/>
+  </g>
+</svg>

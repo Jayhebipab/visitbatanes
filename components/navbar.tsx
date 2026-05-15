@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -56,10 +57,19 @@ export function Navbar() {
       >
         <Link
           href="/"
-          className="flex items-center gap-2 font-display text-lg md:text-xl tracking-tight"
-        > 
-          <span className="hidden sm:inline">
-            <span className="text-foreground">{SITE.shortName}</span>
+          aria-label={`${SITE.name} home`}
+          className="flex items-center gap-2.5 font-display text-lg md:text-xl tracking-tight"
+        >
+          <Image
+            src="/logo-mark.svg"
+            alt=""
+            width={40}
+            height={40}
+            priority
+            className="h-9 w-9 md:h-10 md:w-10 shrink-0"
+          />
+          <span className="hidden sm:inline text-foreground">
+            {SITE.shortName}
           </span>
         </Link>
 

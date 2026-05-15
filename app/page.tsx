@@ -31,6 +31,22 @@ export const metadata: Metadata = {
 const previewFaqs = faqs.slice(0, 5);
 
 export default function HomePage() {
+  // Strong site-name signal targeting Google's site-name display logic.
+  // Note: For *.vercel.app subdomains, Google may still fall back to "Vercel"
+  // until a custom domain is set up (e.g. visitbatanes.ph).
+  const siteNameLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE.url}/#webpage`,
+    url: SITE.url,
+    name: `${SITE.name} — ${SITE.tagline}`,
+    isPartOf: { "@id": `${SITE.url}/#website` },
+    about: { "@id": `${SITE.url}/#batanes` },
+    primaryImageOfPage: `${SITE.url}/opengraph-image`,
+    publisher: { "@id": `${SITE.url}/#organization` },
+    inLanguage: "en-PH",
+  };
+
   const homeLd = {
     "@context": "https://schema.org",
     "@type": "TouristDestination",
@@ -58,6 +74,10 @@ export default function HomePage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNameLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeLd) }}

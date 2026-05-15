@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
 import {
@@ -25,15 +26,19 @@ export function Footer() {
       </h2>
       <div className="container-x grid gap-12 py-16 lg:grid-cols-12">
         <div className="lg:col-span-4">
-          <Link href="/" className="flex items-center gap-2 font-display text-xl">
-            <span
-              aria-hidden
-              className="grid h-10 w-10 place-items-center rounded-full text-primary-foreground"
-              style={{ background: "var(--ocean)" }}
-            >
-              VB
-            </span>
-            {SITE.name}
+          <Link
+            href="/"
+            aria-label={`${SITE.name} home`}
+            className="flex items-center gap-3 font-display text-xl"
+          >
+            <Image
+              src="/logo-mark.svg"
+              alt=""
+              width={48}
+              height={48}
+              className="h-11 w-11 shrink-0"
+            />
+            <span>{SITE.name}</span>
           </Link>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
             {SITE.description}
