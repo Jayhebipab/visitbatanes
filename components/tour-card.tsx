@@ -18,7 +18,7 @@ export function TourCard({ t, priority = false }: { t: Tour; priority?: boolean 
           priority={priority}
           className="object-cover transition-transform duration-[1200ms] group-hover:scale-105"
         />
-        <span className="absolute left-4 top-4 inline-flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-foreground">
+        <span className="absolute left-4 top-4 inline-flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-zinc-900">
           {t.category}
         </span>
         {t.popular && (

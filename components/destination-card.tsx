@@ -29,7 +29,7 @@ export function DestinationCard({
           aria-hidden
           className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"
         />
-        <span className="absolute left-4 top-4 inline-flex items-center gap-1 rounded-full bg-white/85 px-3 py-1 text-xs font-medium text-foreground backdrop-blur">
+        <span className="absolute left-4 top-4 inline-flex items-center gap-1 rounded-full bg-white/85 px-3 py-1 text-xs font-medium text-zinc-900 backdrop-blur">
           {d.category}
         </span>
         <div className="absolute inset-x-0 bottom-0 p-5 text-white">

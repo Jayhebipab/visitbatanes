@@ -42,7 +42,7 @@ export function CtaBooking() {
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
               href="/tours"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-foreground transition-transform hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-zinc-900 transition-transform hover:scale-[1.02]"
             >
               Browse tours
               <ArrowRightIcon size={14} />

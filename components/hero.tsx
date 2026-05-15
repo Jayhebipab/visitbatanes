@@ -75,7 +75,7 @@ export function Hero() {
         >
           <Link
             href="/tours"
-            className="group inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-foreground transition-transform hover:scale-[1.02]"
+            className="group inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-zinc-900 transition-transform hover:scale-[1.02]"
           >
             Plan your journey
             <ArrowRightIcon
